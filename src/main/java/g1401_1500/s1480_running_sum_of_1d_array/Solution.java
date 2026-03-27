@@ -6,6 +6,11 @@ package g1401_1500.s1480_running_sum_of_1d_array;
 public class Solution {
 
     public int[] runningSum(int[] nums) {
-        return null;
+        int sum = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            sum = sum + nums[i];
+            nums[i] = sum;
+        }
+        return nums;
     }
 }
