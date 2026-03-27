@@ -5,19 +5,8 @@ package g0101_0200.s0162_find_peak_element;
 // #2025_03_06_Time_0_ms_(100.00%)_Space_42.78_MB_(21.39%)
 
 public class Solution {
+
     public int findPeakElement(int[] nums) {
-        int start = 0;
-        int end = nums.length - 1;
-        while (start < end) {
-            // This is done because start and end might be big numbers, so it might exceed the
-            // integer limit.
-            int mid = start + ((end - start) / 2);
-            if (nums[mid + 1] > nums[mid]) {
-                start = mid + 1;
-            } else {
-                end = mid;
-            }
-        }
-        return start;
+        return 0;
     }
 }

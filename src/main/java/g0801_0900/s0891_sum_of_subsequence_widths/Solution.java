@@ -2,9 +2,8 @@ package g0801_0900.s0891_sum_of_subsequence_widths;
 
 // #Hard #Array #Math #Sorting #2022_03_28_Time_56_ms_(30.61%)_Space_75.1_MB_(66.04%)
 
-import java.util.Arrays;
-
 public class Solution {
+
     // 1-6 (number of elements in between 1 and 6) = (6-1-1) = 4
     // length of sub seq 2 -> 4C0 3 -> 4C1 ; 4 -> 4c2 ; 5 -> 4C3  6 -> 4C4  4c0 + 4c1 + 4c2 + 4c3 +
     // 4c4 1+4+6+4+1=16
@@ -31,18 +30,6 @@ public class Solution {
         (-1)*A[i]*(pow[l-1-i]-1) + A[i]*(pow[i]-1)
     */
     public int sumSubseqWidths(int[] nums) {
-        int mod = 1_000_000_007;
-        Arrays.sort(nums);
-        int l = nums.length;
-        long[] pow = new long[l];
-        pow[0] = 1;
-        for (int i = 1; i < l; i++) {
-            pow[i] = pow[i - 1] * 2 % mod;
-        }
-        long res = 0;
-        for (int i = 0; i < l; i++) {
-            res = (res + (-1) * nums[i] * (pow[l - 1 - i] - 1) + nums[i] * (pow[i] - 1)) % mod;
-        }
-        return (int) res;
+        return 0;
     }
 }

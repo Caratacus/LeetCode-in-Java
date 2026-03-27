@@ -4,23 +4,12 @@ package g1801_1900.s1894_find_the_student_that_will_replace_the_chalk;
 // #2022_05_09_Time_2_ms_(76.67%)_Space_55.6_MB_(67.06%)
 
 public class Solution {
+
     public int chalkReplacer(int[] chalk, int k) {
-        long localSum = sum(chalk);
-        int currentIndex = 0;
-        if (localSum != 0) {
-            int localK = (int) (k % localSum);
-            while (chalk[currentIndex] <= localK) {
-                localK -= chalk[currentIndex++];
-            }
-        }
-        return currentIndex;
+        return 0;
     }
 
     private long sum(int[] chalk) {
-        long sum = 0;
-        for (int i : chalk) {
-            sum += i;
-        }
-        return sum;
+        return 0L;
     }
 }

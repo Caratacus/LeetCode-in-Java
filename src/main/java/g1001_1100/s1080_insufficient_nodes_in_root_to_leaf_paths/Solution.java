@@ -21,34 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public TreeNode sufficientSubset(TreeNode root, int limit) {
-        return sufficientSubset(root, limit, 0, root.left == null && root.right == null) < limit
-                ? null
-                : root;
+        return null;
     }
 
     public int sufficientSubset(TreeNode root, int limit, int sum, boolean isLeaf) {
-        if (root != null) {
-            int leftSum =
-                    sufficientSubset(
-                            root.left,
-                            limit,
-                            sum + root.val,
-                            root.left == null && root.right == null);
-            int rightSum =
-                    sufficientSubset(
-                            root.right,
-                            limit,
-                            sum + root.val,
-                            root.left == null && root.right == null);
-            if (leftSum < limit) {
-                root.left = null;
-            }
-            if (rightSum < limit) {
-                root.right = null;
-            }
-            return Math.max(leftSum, rightSum);
-        }
-        return isLeaf ? sum : Integer.MIN_VALUE;
+        return 0;
     }
 }

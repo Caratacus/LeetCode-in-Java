@@ -8,6 +8,7 @@ import java.util.HashSet;
 import java.util.List;
 
 public class Solution {
+
     private static final HashSet<Integer> PRIMES = new HashSet<>();
     private static final List<Integer> LIST = new ArrayList<>();
 

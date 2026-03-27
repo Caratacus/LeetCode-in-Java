@@ -9,6 +9,7 @@ import java.util.List;
 
 @SuppressWarnings("java:S2589")
 public class Solution {
+
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> output = new ArrayList<>();
         for (int i = 0; i < numRows; i++) {

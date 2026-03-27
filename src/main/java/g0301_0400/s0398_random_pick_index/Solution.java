@@ -11,6 +11,7 @@ import java.util.Random;
 
 @SuppressWarnings("java:S2245")
 public class Solution {
+
     // O(n) time | O(n) space
     private Map<Integer, List<Integer>> map;
     private Random rand;
@@ -24,12 +25,6 @@ public class Solution {
     }
 
     public int pick(int target) {
-        List<Integer> list = map.get(target);
-        return list.get(rand.nextInt(list.size()));
+        return 0;
     }
 }
-/*
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(nums);
- * int param_1 = obj.pick(target);
- */

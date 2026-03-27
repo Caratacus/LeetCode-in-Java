@@ -20,6 +20,7 @@ import java.util.Random;
  */
 @SuppressWarnings("java:S2245")
 public class Solution {
+
     private List<Integer> al;
     private Random rand;
 
@@ -33,19 +34,6 @@ public class Solution {
     }
 
     public int getRandom() {
-        /*
-        Math.random() will generate a random number b/w 0 & 1.
-        then multiply it with the array size.
-        take only the integer part which is a random index.
-        return the element at that random index.
-         */
-        int ind = rand.nextInt(al.size());
-        return al.get(ind);
+        return 0;
     }
 }
-
-/*
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(head);
- * int param_1 = obj.getRandom();
- */

@@ -5,19 +5,8 @@ package g3201_3300.s3218_minimum_cost_for_cutting_cake_i;
 
 @SuppressWarnings("java:S1172")
 public class Solution {
+
     public int minimumCost(int m, int n, int[] horizontalCut, int[] verticalCut) {
-        int sum = 0;
-        for (int hc : horizontalCut) {
-            sum += hc;
-        }
-        for (int vc : verticalCut) {
-            sum += vc;
-        }
-        for (int hc : horizontalCut) {
-            for (int vc : verticalCut) {
-                sum += Math.min(hc, vc);
-            }
-        }
-        return sum;
+        return 0;
     }
 }

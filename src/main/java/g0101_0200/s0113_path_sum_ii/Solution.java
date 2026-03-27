@@ -23,6 +23,7 @@ import java.util.List;
  * }
  */
 public class Solution {
+
     public List<List<Integer>> pathSum(TreeNode root, int targetSum) {
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) {
@@ -33,17 +34,9 @@ public class Solution {
     }
 
     private void recur(
-            List<List<Integer>> res, ArrayList<Integer> al, int sum, int targetSum, TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        al.add(root.val);
-        sum += root.val;
-        if (sum == targetSum && root.left == null && root.right == null) {
-            res.add(new ArrayList<>(al));
-        }
-        recur(res, al, sum, targetSum, root.left);
-        recur(res, al, sum, targetSum, root.right);
-        al.remove(al.size() - 1);
-    }
+            List<List<Integer>> res,
+            ArrayList<Integer> al,
+            int sum,
+            int targetSum,
+            TreeNode root) {}
 }

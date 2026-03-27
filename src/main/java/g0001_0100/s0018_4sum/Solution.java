@@ -8,6 +8,7 @@ import java.util.List;
 
 @SuppressWarnings("java:S135")
 public class Solution {
+
     public List<List<Integer>> fourSum(int[] nums, int target) {
         int n = nums.length;
         Arrays.sort(nums);

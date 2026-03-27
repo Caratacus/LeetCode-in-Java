@@ -4,7 +4,6 @@ package g0501_0600.s0589_n_ary_tree_preorder_traversal;
 // #2022_08_25_Time_1_ms_(90.98%)_Space_45.4_MB_(83.13%)
 
 import com_github_leetcode.Node;
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -26,19 +25,10 @@ class Node {
 };
 */
 public class Solution {
+
     public List<Integer> preorder(Node root) {
-        List<Integer> res = new ArrayList<>();
-        preorderHelper(res, root);
-        return res;
+        return null;
     }
 
-    private void preorderHelper(List<Integer> res, Node root) {
-        if (root == null) {
-            return;
-        }
-        res.add(root.val);
-        for (Node node : root.neighbors) {
-            preorderHelper(res, node);
-        }
-    }
+    private void preorderHelper(List<Integer> res, Node root) {}
 }

@@ -3,7 +3,6 @@ package g0501_0600.s0590_n_ary_tree_postorder_traversal;
 // #Easy #Depth_First_Search #Tree #Stack #2022_08_25_Time_1_ms_(90.45%)_Space_46.5_MB_(27.08%)
 
 import com_github_leetcode.Node;
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -25,24 +24,12 @@ class Node {
 };
 */
 public class Solution {
+
     private List<Integer> ans;
 
     public List<Integer> postorder(Node root) {
-        ans = new ArrayList<>();
-        recursion(root);
-        if (root != null) {
-            ans.add(root.val);
-        }
-        return ans;
+        return null;
     }
 
-    private void recursion(Node root) {
-        if (root == null) {
-            return;
-        }
-        for (Node child : root.neighbors) {
-            recursion(child);
-            ans.add(child.val);
-        }
-    }
+    private void recursion(Node root) {}
 }

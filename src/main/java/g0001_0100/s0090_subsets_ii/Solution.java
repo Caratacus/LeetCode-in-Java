@@ -9,6 +9,7 @@ import java.util.List;
 
 @SuppressWarnings("java:S5413")
 public class Solution {
+
     List<List<Integer>> allComb = new ArrayList<>();
     List<Integer> comb = new ArrayList<>();
     int[] nums;
@@ -21,18 +22,5 @@ public class Solution {
         return allComb;
     }
 
-    private void dfs(int start) {
-        if (start > nums.length) {
-            return;
-        }
-        for (int i = start; i < nums.length; i++) {
-            if (i > start && nums[i] == nums[i - 1]) {
-                continue;
-            }
-            comb.add(nums[i]);
-            allComb.add(new ArrayList<>(comb));
-            dfs(i + 1);
-            comb.remove(comb.size() - 1);
-        }
-    }
+    private void dfs(int start) {}
 }

@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
+
     public List<List<Integer>> largeGroupPositions(String s) {
         List<List<Integer>> map = new ArrayList<>();
         int i = 0;

@@ -27,6 +27,7 @@ import java.util.Queue;
  * }
  */
 public class Solution {
+
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) {

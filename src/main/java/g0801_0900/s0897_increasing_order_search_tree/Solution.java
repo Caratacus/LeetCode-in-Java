@@ -4,7 +4,6 @@ package g0801_0900.s0897_increasing_order_search_tree;
 // #2022_03_28_Time_0_ms_(100.00%)_Space_39.9_MB_(83.16%)
 
 import com_github_leetcode.TreeNode;
-import java.util.LinkedList;
 import java.util.List;
 
 /*
@@ -23,21 +22,10 @@ import java.util.List;
  * }
  */
 public class Solution {
+
     public TreeNode increasingBST(final TreeNode root) {
-        final List<TreeNode> list = new LinkedList<>();
-        traverse(root, list);
-        for (int i = 1; i < list.size(); i++) {
-            list.get(i - 1).right = list.get(i);
-            list.get(i).left = null;
-        }
-        return list.get(0);
+        return null;
     }
 
-    private void traverse(final TreeNode root, final List<TreeNode> list) {
-        if (root != null) {
-            traverse(root.left, list);
-            list.add(root);
-            traverse(root.right, list);
-        }
-    }
+    private void traverse(final TreeNode root, final List<TreeNode> list) {}
 }

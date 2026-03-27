@@ -2,10 +2,8 @@ package g2101_2200.s2191_sort_the_jumbled_numbers;
 
 // #Medium #Array #Sorting #2022_06_07_Time_117_ms_(96.53%)_Space_50.8_MB_(90.75%)
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Solution {
+
     private static class RealNum {
         int index;
         int orig;
@@ -29,24 +27,6 @@ public class Solution {
     }
 
     public int[] sortJumbled(int[] mapping, int[] nums) {
-        List<RealNum> realNums = new ArrayList<>();
-        for (int i = 0; i < nums.length; i++) {
-            int num = nums[i];
-            RealNum realNum = new RealNum(mapping, num, i);
-            realNums.add(realNum);
-        }
-        realNums.sort(
-                (a, b) -> {
-                    int retval = a.real - b.real;
-                    if (retval != 0) {
-                        return retval;
-                    }
-                    return a.index - b.index;
-                });
-        int[] retval = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            retval[i] = realNums.get(i).orig;
-        }
-        return retval;
+        return null;
     }
 }

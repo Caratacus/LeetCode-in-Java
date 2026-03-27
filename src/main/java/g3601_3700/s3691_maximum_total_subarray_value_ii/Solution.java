@@ -3,9 +3,8 @@ package g3601_3700.s3691_maximum_total_subarray_value_ii;
 // #Hard #Array #Greedy #Heap_Priority_Queue #Segment_Tree #Weekly_Contest_468
 // #2025_09_26_Time_89_ms_(80.08%)_Space_81.62_MB_(23.69%)
 
-import java.util.PriorityQueue;
-
 public class Solution {
+
     private static class Sparse {
         long[][] mn;
         long[][] mx;
@@ -43,22 +42,6 @@ public class Solution {
     }
 
     public long maxTotalValue(int[] nums, int k) {
-        int n = nums.length;
-        Sparse st = new Sparse(nums);
-        PriorityQueue<long[]> pq = new PriorityQueue<>((a, b) -> Long.compare(b[0], a[0]));
-        for (int i = 0; i < n; i++) {
-            pq.add(new long[] {st.getMax(i, n - 1) - st.getMin(i, n - 1), i, n - 1});
-        }
-        long ans = 0;
-        while (k-- > 0 && !pq.isEmpty()) {
-            var cur = pq.poll();
-            ans += cur[0];
-            int l = (int) cur[1];
-            int r = (int) cur[2];
-            if (r - 1 > l) {
-                pq.add(new long[] {st.getMax(l, r - 1) - st.getMin(l, r - 1), l, r - 1});
-            }
-        }
-        return ans;
+        return 0L;
     }
 }

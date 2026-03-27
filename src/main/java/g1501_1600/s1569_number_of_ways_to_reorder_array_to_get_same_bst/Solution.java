@@ -5,19 +5,9 @@ package g1501_1600.s1569_number_of_ways_to_reorder_array_to_get_same_bst;
 // #2022_04_11_Time_21_ms_(97.44%)_Space_49.9_MB_(92.31%)
 
 public class Solution {
-    public int numOfWays(int[] nums) {
-        long mod = 1000000007;
-        long[] fact = new long[1001];
-        fact[0] = 1;
-        for (int i = 1; i <= 1000; i++) {
-            fact[i] = (fact[i - 1] * (i)) % mod;
-        }
-        TreeNode root = new TreeNode(nums[0]);
-        for (int i = 1; i < nums.length; i++) {
-            addInTree(nums[i], root);
-        }
 
-        return (int) ((calcPerms(root, fact).perm - 1) % mod);
+    public int numOfWays(int[] nums) {
+        return 0;
     }
 
     static TreeInfo calcPerms(TreeNode root, long[] fact) {

@@ -24,16 +24,10 @@ import java.util.TreeSet;
  * }
  */
 public class Solution {
+
     private final TreeSet<Integer> set = new TreeSet<>();
 
-    private void traverse(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        traverse(root.left);
-        set.add(root.val);
-        traverse(root.right);
-    }
+    private void traverse(TreeNode root) {}
 
     public List<List<Integer>> closestNodes(TreeNode root, List<Integer> queries) {
         traverse(root);

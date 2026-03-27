@@ -21,21 +21,14 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int sum = 0;
 
     private int sumTilt(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        int ls = sumTilt(root.left);
-        int rs = sumTilt(root.right);
-        sum += Math.abs(ls - rs);
-        return ls + rs + root.val;
+        return 0;
     }
 
     public int findTilt(TreeNode root) {
-        sum = 0;
-        sumTilt(root);
-        return sum;
+        return 0;
     }
 }

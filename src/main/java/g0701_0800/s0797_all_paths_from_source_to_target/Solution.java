@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+
     private List<List<Integer>> res;
 
     public List<List<Integer>> allPathsSourceTarget(int[][] graph) {
@@ -19,14 +20,5 @@ public class Solution {
         return res;
     }
 
-    private void solve(int[][] graph, List<Integer> temp, int lastNode) {
-        if (lastNode == graph.length - 1) {
-            res.add(new ArrayList<>(temp));
-        }
-        for (int link : graph[lastNode]) {
-            temp.add(link);
-            solve(graph, temp, link);
-            temp.remove(temp.size() - 1);
-        }
-    }
+    private void solve(int[][] graph, List<Integer> temp, int lastNode) {}
 }

@@ -21,27 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public TreeNode lcaDeepestLeaves(TreeNode root) {
-        if (root == null) {
-            return null;
-        }
-        int leftDep = getDep(root.left);
-        int rightDep = getDep(root.right);
-        if (leftDep == rightDep) {
-            return root;
-        } else {
-            if (leftDep > rightDep) {
-                return lcaDeepestLeaves(root.left);
-            } else {
-                return lcaDeepestLeaves(root.right);
-            }
-        }
+        return null;
     }
 
     public int getDep(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        return 1 + Math.max(getDep(root.left), getDep(root.right));
+        return 0;
     }
 }

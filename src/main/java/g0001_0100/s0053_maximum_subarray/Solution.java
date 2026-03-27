@@ -6,18 +6,8 @@ package g0001_0100.s0053_maximum_subarray;
 // #2024_11_11_Time_1_ms_(99.32%)_Space_56.9_MB_(54.82%)
 
 public class Solution {
+
     public int maxSubArray(int[] nums) {
-        int maxi = Integer.MIN_VALUE;
-        int sum = 0;
-        for (int num : nums) {
-            // calculating sub-array sum
-            sum += num;
-            maxi = Math.max(sum, maxi);
-            if (sum < 0) {
-                // there is no point to carry a -ve subarray sum. hence setting to 0
-                sum = 0;
-            }
-        }
-        return maxi;
+        return 0;
     }
 }

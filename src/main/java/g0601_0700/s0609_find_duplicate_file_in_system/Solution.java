@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Solution {
+
     public List<List<String>> findDuplicate(String[] paths) {
         Map<String, List<String>> map = new HashMap<>();
         for (String path : paths) {

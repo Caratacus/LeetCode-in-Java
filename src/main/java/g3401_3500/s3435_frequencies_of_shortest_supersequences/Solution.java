@@ -8,6 +8,7 @@ import java.util.List;
 
 @SuppressWarnings("unchecked")
 public class Solution {
+
     private int min = Integer.MAX_VALUE;
     private List<int[]> lists = new ArrayList<>();
 
@@ -63,51 +64,13 @@ public class Solution {
         return res;
     }
 
-    private void dfs(List<Integer>[] links, int i, int[] arr1, int[] arr, int n) {
-        if (n > min) {
-            return;
-        }
-        if (i == 26) {
-            if (!chk(links, arr)) {
-                return;
-            }
-            if (n < min) {
-                min = n;
-                lists = new ArrayList<>();
-                lists.add(arr.clone());
-            } else if (n == min) {
-                lists.add(arr.clone());
-            }
-            return;
-        }
-        if (arr1[i] >= 0) {
-            arr[i] = arr1[i];
-            dfs(links, i + 1, arr1, arr, n + arr1[i]);
-        } else {
-            arr[i] = 1;
-            dfs(links, i + 1, arr1, arr, n + 1);
-            arr[i] = 2;
-            dfs(links, i + 1, arr1, arr, n + 2);
-        }
-    }
+    private void dfs(List<Integer>[] links, int i, int[] arr1, int[] arr, int n) {}
 
     private boolean chk(List<Integer>[] links, int[] arr) {
-        for (int i = 0; i < 26; i++) {
-            if (arr[i] == 1 && dfs1(links, arr, new boolean[26], i)) {
-                return false;
-            }
-        }
-        return true;
+        return false;
     }
 
     private boolean dfs1(List<Integer>[] links, int[] arr, boolean[] seens, int i) {
-        seens[i] = true;
-        for (int next : links[i]) {
-            if (arr[next] == 1 && (seens[next] || dfs1(links, arr, seens, next))) {
-                return true;
-            }
-        }
-        seens[i] = false;
         return false;
     }
 }

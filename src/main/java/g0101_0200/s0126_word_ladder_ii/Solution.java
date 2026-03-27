@@ -4,7 +4,6 @@ package g0101_0200.s0126_word_ladder_ii;
 // #2022_07_02_Time_19_ms_(60.53%)_Space_43_MB_(90.12%)
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
@@ -15,6 +14,7 @@ import java.util.Queue;
 import java.util.Set;
 
 public class Solution {
+
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
         List<List<String>> ans = new ArrayList<>();
         // reverse graph start from endWord
@@ -77,40 +77,9 @@ public class Solution {
             String beginWord,
             Map<String, Set<String>> graph,
             List<List<String>> ans,
-            Set<String> path) {
-        Set<String> next = graph.get(endWord);
-        if (next == null) {
-            return;
-        }
-        for (String word : next) {
-            path.add(word);
-            if (beginWord.equals(word)) {
-                List<String> shortestPath = new ArrayList<>(path);
-                // reverse words in shortest path
-                Collections.reverse(shortestPath);
-                // add the shortest path to ans.
-                ans.add(shortestPath);
-            } else {
-                findPath(word, beginWord, graph, ans, path);
-            }
-            path.remove(word);
-        }
-    }
+            Set<String> path) {}
 
     private boolean isLadder(String s, String t) {
-        if (s.length() != t.length()) {
-            return false;
-        }
-        int diffCount = 0;
-        int n = s.length();
-        for (int i = 0; i < n; i++) {
-            if (s.charAt(i) != t.charAt(i)) {
-                diffCount++;
-            }
-            if (diffCount > 1) {
-                return false;
-            }
-        }
-        return diffCount == 1;
+        return false;
     }
 }

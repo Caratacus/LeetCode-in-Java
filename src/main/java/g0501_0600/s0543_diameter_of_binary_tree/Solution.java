@@ -22,21 +22,14 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int diameter;
 
     public int diameterOfBinaryTree(TreeNode root) {
-        diameter = 0;
-        diameterOfBinaryTreeUtil(root);
-        return diameter;
+        return 0;
     }
 
     private int diameterOfBinaryTreeUtil(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        int leftLength = root.left != null ? 1 + diameterOfBinaryTreeUtil(root.left) : 0;
-        int rightLength = root.right != null ? 1 + diameterOfBinaryTreeUtil(root.right) : 0;
-        diameter = Math.max(diameter, leftLength + rightLength);
-        return Math.max(leftLength, rightLength);
+        return 0;
     }
 }

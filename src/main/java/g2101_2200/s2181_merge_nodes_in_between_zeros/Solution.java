@@ -15,24 +15,8 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public ListNode mergeNodes(ListNode head) {
-        ListNode temp = head.next;
-        ListNode slow = head;
-        int sum = 0;
-        ListNode fast = temp;
-        while (temp != null) {
-            if (temp.val == 0) {
-                temp.val = sum;
-                sum = 0;
-                slow.next = fast.next;
-                slow = temp;
-                fast = fast.next;
-            } else {
-                sum += temp.val;
-                fast = temp;
-            }
-            temp = temp.next;
-        }
-        return head.next;
+        return null;
     }
 }

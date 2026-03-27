@@ -6,37 +6,20 @@ package g1201_1300.s1239_maximum_length_of_a_concatenated_string_with_unique_cha
 import java.util.List;
 
 public class Solution {
+
     public int maxLength(List<String> arr) {
-        return find(0, 0, arr);
+        return 0;
     }
 
     private int find(int index, int visChar, List<String> arr) {
-        if (index == arr.size()) {
-            return 0;
-        }
-        int ans = 0;
-        ans = Math.max(ans, find(index + 1, visChar, arr));
-        if (checkCurrStringValidOrNot(visChar, arr.get(index))) {
-            visChar = updateState(visChar, arr.get(index));
-            ans = Math.max(ans, arr.get(index).length() + find(index + 1, visChar, arr));
-        }
-        return ans;
+        return 0;
     }
 
     private boolean checkCurrStringValidOrNot(int vis, String s) {
-        for (char c : s.toCharArray()) {
-            if ((vis & (1 << (c - 'a'))) != 0) {
-                return false;
-            }
-            vis |= (1 << (c - 'a'));
-        }
-        return true;
+        return false;
     }
 
     private int updateState(int vis, String s) {
-        for (char c : s.toCharArray()) {
-            vis |= (1 << (c - 'a'));
-        }
-        return vis;
+        return 0;
     }
 }

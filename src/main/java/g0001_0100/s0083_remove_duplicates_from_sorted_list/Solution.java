@@ -16,20 +16,8 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public ListNode deleteDuplicates(ListNode head) {
-        if (head == null) {
-            return null;
-        }
-        ListNode current = head;
-        ListNode next = current.next;
-        while (null != next) {
-            if (current.val == next.val) {
-                current.next = next.next;
-            } else {
-                current = next;
-            }
-            next = current.next;
-        }
-        return head;
+        return null;
     }
 }

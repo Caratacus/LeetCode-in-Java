@@ -15,52 +15,16 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public ListNode reverseEvenLengthGroups(ListNode head) {
-        int totalSize = size(head);
-        int curSize = 1;
-        ListNode dummy = new ListNode(-1);
-        dummy.next = head;
-        ListNode cur = dummy;
-        while (totalSize > 0) {
-            if (curSize % 2 == 0) {
-                ListNode[] arr = reverse(cur.next, curSize);
-                cur.next = arr[0];
-                arr[1].next = arr[2];
-                cur = arr[1];
-            } else {
-                for (int i = 0; i < curSize; i++) {
-                    cur = cur.next;
-                }
-            }
-            totalSize -= curSize;
-            curSize = totalSize >= curSize + 1 ? curSize + 1 : totalSize;
-        }
-        return head;
+        return null;
     }
 
     private ListNode[] reverse(ListNode head, int size) {
-        ListNode prev = null;
-        ListNode forward;
-        ListNode cur = head;
-        while (size-- > 0) {
-            forward = cur.next;
-            cur.next = prev;
-            prev = cur;
-            cur = forward;
-        }
-        ListNode[] arr = new ListNode[3];
-        arr[0] = prev;
-        arr[1] = head;
-        arr[2] = cur;
-        return arr;
+        return null;
     }
 
     private int size(ListNode head) {
-        int size = 0;
-        while (head != null) {
-            size++;
-            head = head.next;
-        }
-        return size;
+        return 0;
     }
 }

@@ -21,19 +21,14 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int i = 0;
 
     public TreeNode bstFromPreorder(int[] preorder) {
-        return bstFromPreorder(preorder, Integer.MAX_VALUE);
+        return null;
     }
 
     private TreeNode bstFromPreorder(int[] preorder, int bound) {
-        if (i == preorder.length || preorder[i] > bound) {
-            return null;
-        }
-        TreeNode root = new TreeNode(preorder[i++]);
-        root.left = bstFromPreorder(preorder, root.val);
-        root.right = bstFromPreorder(preorder, bound);
-        return root;
+        return null;
     }
 }

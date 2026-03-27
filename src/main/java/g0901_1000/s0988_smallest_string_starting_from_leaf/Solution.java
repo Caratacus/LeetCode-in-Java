@@ -21,28 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private String res = "";
 
     public String smallestFromLeaf(TreeNode root) {
-        dfs(root, new StringBuilder());
-        return res;
+        return null;
     }
 
-    private void dfs(TreeNode root, StringBuilder currStr) {
-        if (root == null) {
-            return;
-        }
-        currStr.insert(0, (char) (root.val + 97));
-        if (root.left == null && root.right == null) {
-            if (res.equals("")) {
-                res = currStr.toString();
-            } else {
-                res = res.compareTo(currStr.toString()) > 0 ? currStr.toString() : res;
-            }
-        } else {
-            dfs(root.left, currStr);
-            dfs(root.right, currStr);
-        }
-        currStr.deleteCharAt(0);
-    }
+    private void dfs(TreeNode root, StringBuilder currStr) {}
 }

@@ -13,6 +13,7 @@ class Node {
 };
 */
 public class Solution {
+
     // is true ONLY for the first element of the list
     private boolean first = true;
     // Holds the head node of the newly constructed doubly linked list
@@ -21,31 +22,6 @@ public class Solution {
     private Node current;
 
     public Node flatten(Node head) {
-        if (head == null) {
-            return root;
-        } else {
-            // Construct our doubly linked list
-            if (first) {
-                first = !first;
-                root = new Node(head.val);
-                current = root;
-            } else {
-                // Map all values to the newly constructed list.
-                // temp value to hold our prev element
-                Node temp = current;
-                current.next = new Node(head.val);
-                current = current.next;
-                current.prev = temp;
-            }
-        }
-        // iterate over child nodes.
-        if (head.child != null) {
-            flatten(head.child);
-        }
-        if (head.next != null) {
-            // iterate next
-            flatten(head.next);
-        }
-        return root;
+        return null;
     }
 }

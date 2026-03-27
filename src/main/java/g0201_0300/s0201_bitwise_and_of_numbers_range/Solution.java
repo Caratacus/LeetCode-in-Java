@@ -4,6 +4,7 @@ package g0201_0300.s0201_bitwise_and_of_numbers_range;
 // #Top_Interview_150_Bit_Manipulation #2025_03_09_Time_3_ms_(100.00%)_Space_43.70_MB_(94.56%)
 
 public class Solution {
+
     private static final int[] MASKS =
             new int[] {
                 0,
@@ -41,6 +42,6 @@ public class Solution {
             };
 
     public int rangeBitwiseAnd(int left, int right) {
-        return left == right ? left : right & MASKS[Integer.numberOfLeadingZeros(left ^ right)];
+        return 0;
     }
 }

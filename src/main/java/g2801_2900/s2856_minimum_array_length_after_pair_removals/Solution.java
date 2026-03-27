@@ -6,23 +6,8 @@ package g2801_2900.s2856_minimum_array_length_after_pair_removals;
 import java.util.List;
 
 public class Solution {
+
     public int minLengthAfterRemovals(List<Integer> nums) {
-        int n = nums.size();
-        int i = 0;
-        int j;
-        if (n % 2 == 0) {
-            j = n / 2;
-        } else {
-            j = n / 2 + 1;
-        }
-        int count = 0;
-        while (i < n / 2 && j < n) {
-            if (nums.get(i) < nums.get(j)) {
-                count += 2;
-            }
-            i++;
-            j++;
-        }
-        return n - count;
+        return 0;
     }
 }

@@ -21,33 +21,15 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int max = 0;
 
     public int amountOfTime(TreeNode root, int start) {
-        dfs(root, start, new Distance(-1));
-        return max;
+        return 0;
     }
 
     private int dfs(TreeNode root, int start, Distance l) {
-        if (root == null) {
-            return 0;
-        }
-        Distance ld = new Distance(-1);
-        Distance rd = new Distance(-1);
-        int left = dfs(root.left, start, ld);
-        int right = dfs(root.right, start, rd);
-        if (l.val == -1 && start == root.val) {
-            max = Math.max(left, right);
-            l.val = 1;
-        }
-        if (ld.val != -1) {
-            max = Math.max(max, ld.val + right);
-            l.val = ld.val + 1;
-        } else if (rd.val != -1) {
-            max = Math.max(max, rd.val + left);
-            l.val = rd.val + 1;
-        }
-        return Math.max(left, right) + 1;
+        return 0;
     }
 
     private static class Distance {

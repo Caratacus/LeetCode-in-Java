@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.TreeMap;
 
 public class Solution {
+
     public List<List<Integer>> getSkyline(int[][] buildings) {
         List<List<Integer>> list = new ArrayList<>();
         List<int[]> lines = new ArrayList<>();

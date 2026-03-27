@@ -15,24 +15,12 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public ListNode insertGreatestCommonDivisors(ListNode head) {
-        ListNode prevNode = null;
-        ListNode currNode = head;
-        while (currNode != null) {
-            if (prevNode != null) {
-                int gcd = greatestCommonDivisor(prevNode.val, currNode.val);
-                prevNode.next = new ListNode(gcd, currNode);
-            }
-            prevNode = currNode;
-            currNode = currNode.next;
-        }
-        return head;
+        return null;
     }
 
     private int greatestCommonDivisor(int val1, int val2) {
-        if (val2 == 0) {
-            return val1;
-        }
-        return greatestCommonDivisor(val2, val1 % val2);
+        return 0;
     }
 }

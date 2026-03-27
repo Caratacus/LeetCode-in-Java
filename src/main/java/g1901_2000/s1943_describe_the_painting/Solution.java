@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
+
     public List<List<Long>> splitPainting(int[][] segments) {
         List<List<Long>> result = new ArrayList<>();
         int n = 1;

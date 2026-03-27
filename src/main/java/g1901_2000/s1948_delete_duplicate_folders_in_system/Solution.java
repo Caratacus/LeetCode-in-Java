@@ -4,12 +4,12 @@ package g1901_2000.s1948_delete_duplicate_folders_in_system;
 // #2022_05_18_Time_92_ms_(97.82%)_Space_69.5_MB_(93.45%)
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class Solution {
+
     private Map<String, ArrayList<Folder>> duplicates;
     private List<List<String>> foldersWithRemovedNames;
 
@@ -54,40 +54,11 @@ public class Solution {
         }
 
         private Folder addSubFolder(String foldername) {
-            return subFolders.computeIfAbsent(foldername, f -> new Folder(f, this));
+            return null;
         }
 
-        private void calculateHash() {
-            List<String> subFolderNames = new ArrayList<>(subFolders.keySet());
-            Collections.sort(subFolderNames);
-            StringBuilder builder = new StringBuilder();
-            for (String foldername : subFolderNames) {
-                Folder folder = subFolders.get(foldername);
-                folder.calculateHash();
-                builder.append('#');
-                builder.append(foldername);
-                if (!folder.folderHash.isEmpty()) {
-                    builder.append('(');
-                    builder.append(folder.folderHash);
-                    builder.append(')');
-                }
-            }
-            folderHash = builder.toString();
-            if (!folderHash.isEmpty()) {
-                ArrayList<Folder> duplicateFolders =
-                        duplicates.computeIfAbsent(folderHash, k -> new ArrayList<>());
-                duplicateFolders.add(this);
-            }
-        }
+        private void calculateHash() {}
 
-        private void addPaths(List<String> parentPath) {
-            List<String> currentPath = new ArrayList<>(parentPath);
-            currentPath.add(name);
-            foldersWithRemovedNames.add(currentPath);
-            for (Map.Entry<String, Folder> entry : subFolders.entrySet()) {
-                Folder folder = entry.getValue();
-                folder.addPaths(currentPath);
-            }
-        }
+        private void addPaths(List<String> parentPath) {}
     }
 }

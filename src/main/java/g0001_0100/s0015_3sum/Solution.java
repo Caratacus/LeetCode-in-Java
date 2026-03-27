@@ -11,6 +11,7 @@ import java.util.List;
 
 @SuppressWarnings("java:S127")
 public class Solution {
+
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         final int len = nums.length;

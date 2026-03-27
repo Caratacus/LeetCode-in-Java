@@ -16,54 +16,14 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public int[] nextLargerNodes(ListNode head) {
-        int len = length(head);
-        int i = 0;
-        int[] arr = new int[len];
-        int[] idx = new int[len];
-        while (head != null) {
-            arr[i] = head.val;
-            head = head.next;
-            i++;
-        }
-        hlp(arr, idx, 0);
-        i = 0;
-        while (i < idx.length) {
-            int j = idx[i];
-            if (j != -1) {
-                arr[i] = arr[j];
-            } else {
-                arr[i] = 0;
-            }
-            i++;
-        }
-        arr[i - 1] = 0;
-        return arr;
+        return null;
     }
 
-    private void hlp(int[] arr, int[] idx, int i) {
-        if (i == arr.length - 1) {
-            idx[i] = -1;
-            return;
-        }
-        hlp(arr, idx, i + 1);
-        int j = i + 1;
-        while (j != -1 && arr[i] >= arr[j]) {
-            j = idx[j];
-        }
-        if ((j != -1) && arr[i] >= arr[j]) {
-            idx[i] = -1;
-        } else {
-            idx[i] = j;
-        }
-    }
+    private void hlp(int[] arr, int[] idx, int i) {}
 
     private int length(ListNode head) {
-        int len = 0;
-        while (head != null) {
-            head = head.next;
-            len++;
-        }
-        return len;
+        return 0;
     }
 }

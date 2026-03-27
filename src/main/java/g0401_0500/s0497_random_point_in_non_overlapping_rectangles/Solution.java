@@ -7,6 +7,7 @@ import java.util.Random;
 
 @SuppressWarnings("java:S2245")
 public class Solution {
+
     private final int[] weights;
     private final int[][] rects;
     private final Random random;
@@ -23,39 +24,14 @@ public class Solution {
     }
 
     public int[] pick() {
-        int picked = 1 + random.nextInt(weights[weights.length - 1]);
-        int idx = findGreaterOrEqual(picked);
-        return getRandomPoint(idx);
+        return null;
     }
 
     private int findGreaterOrEqual(int target) {
-        int left = 0;
-        int right = weights.length - 1;
-        while (left + 1 < right) {
-            int mid = left + (right - left) / 2;
-            if (weights[mid] >= target) {
-                right = mid;
-            } else {
-                left = mid + 1;
-            }
-        }
-        return weights[left] >= target ? left : right;
+        return 0;
     }
 
     private int[] getRandomPoint(int idx) {
-        int[] r = rects[idx];
-        int left = r[0];
-        int right = r[2];
-        int bot = r[1];
-        int top = r[3];
-        return new int[] {
-            left + random.nextInt(right - left + 1), bot + random.nextInt(top - bot + 1)
-        };
+        return null;
     }
 }
-
-/*
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(rects);
- * int[] param_1 = obj.pick();
- */

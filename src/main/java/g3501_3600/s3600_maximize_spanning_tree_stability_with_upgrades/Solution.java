@@ -4,70 +4,13 @@ package g3501_3600.s3600_maximize_spanning_tree_stability_with_upgrades;
 // #2025_06_30_Time_51_ms_(100.00%)_Space_132.43_MB_(100.00%)
 
 public class Solution {
+
     public int maxStability(int n, int[][] edges, int k) {
-        int low = 0;
-        int high = 0;
-        for (int[] edge : edges) {
-            high = Math.max(high, edge[2]);
-        }
-        high *= 2;
-        int ans = -1;
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            if (feasible(mid, n, edges, k)) {
-                ans = mid;
-                low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-        return ans;
+        return 0;
     }
 
     private boolean feasible(int t, int n, int[][] edges, int k) {
-        int[] par = new int[n];
-        int[] rnk = new int[n];
-        int[] comp = new int[] {n};
-        for (int i = 0; i < n; i++) {
-            par[i] = i;
-        }
-        UnionFind uf = new UnionFind(par, rnk, comp);
-        int cost = 0;
-        int half = (t + 1) / 2;
-        for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            int s = edge[2];
-            int m = edge[3];
-            if (m == 1 && (s < t || !uf.union(u, v))) {
-                return false;
-            }
-        }
-        for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            int s = edge[2];
-            int m = edge[3];
-            if (m == 0 && s >= t) {
-                uf.union(u, v);
-            }
-        }
-        if (comp[0] == 1) {
-            return true;
-        }
-        for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            int s = edge[2];
-            int m = edge[3];
-            if (m == 0 && s >= half && s < t && uf.union(u, v)) {
-                cost++;
-                if (cost > k) {
-                    return false;
-                }
-            }
-        }
-        return comp[0] == 1;
+        return false;
     }
 
     private static class UnionFind {

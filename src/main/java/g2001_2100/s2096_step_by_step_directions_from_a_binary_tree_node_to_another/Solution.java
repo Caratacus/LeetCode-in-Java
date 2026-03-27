@@ -6,28 +6,12 @@ package g2001_2100.s2096_step_by_step_directions_from_a_binary_tree_node_to_anot
 import com_github_leetcode.TreeNode;
 
 public class Solution {
+
     private boolean find(TreeNode n, int val, StringBuilder sb) {
-        if (n.val == val) {
-            return true;
-        }
-        if (n.left != null && find(n.left, val, sb)) {
-            sb.append("L");
-        } else if (n.right != null && find(n.right, val, sb)) {
-            sb.append("R");
-        }
-        return !sb.isEmpty();
+        return false;
     }
 
     public String getDirections(TreeNode root, int startValue, int destValue) {
-        StringBuilder s = new StringBuilder();
-        StringBuilder d = new StringBuilder();
-        find(root, startValue, s);
-        find(root, destValue, d);
-        int i = 0;
-        int maxI = Math.min(d.length(), s.length());
-        while (i < maxI && s.charAt(s.length() - i - 1) == d.charAt(d.length() - i - 1)) {
-            ++i;
-        }
-        return "U".repeat(Math.max(0, s.length() - i)) + d.reverse().substring(i);
+        return null;
     }
 }

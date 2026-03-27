@@ -21,22 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int count = 0;
 
-    private void traverse(TreeNode root, int max) {
-        if (root == null) {
-            return;
-        }
-        if (root.val >= max) {
-            count += 1;
-            max = root.val;
-        }
-        traverse(root.left, max);
-        traverse(root.right, max);
-    }
+    private void traverse(TreeNode root, int max) {}
 
     public int goodNodes(TreeNode root) {
-        traverse(root, Integer.MIN_VALUE);
-        return count;
+        return 0;
     }
 }

@@ -21,44 +21,17 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int ans;
     private int[] arr;
 
     public int pseudoPalindromicPaths(TreeNode root) {
-        ans = 0;
-        arr = new int[10];
-        path(root);
-        return ans;
+        return 0;
     }
 
     private int isPalidrome() {
-        int c = 0;
-        int s = 0;
-        for (int i = 0; i < 10; i++) {
-            s += arr[i];
-            if (arr[i] % 2 != 0) {
-                c++;
-            }
-        }
-        if (s % 2 == 0) {
-            return c == 0 ? 1 : 0;
-        }
-        return c <= 1 ? 1 : 0;
+        return 0;
     }
 
-    private void path(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        if (root.left == null && root.right == null) {
-            arr[root.val]++;
-            ans += isPalidrome();
-            arr[root.val]--;
-            return;
-        }
-        arr[root.val]++;
-        path(root.left);
-        path(root.right);
-        arr[root.val]--;
-    }
+    private void path(TreeNode root) {}
 }

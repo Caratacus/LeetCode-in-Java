@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Solution {
+
     public List<List<Integer>> groupThePeople(int[] groupSizes) {
         Map<Integer, List<Integer>> map = new HashMap<>();
         for (int i = 0; i < groupSizes.length; i++) {

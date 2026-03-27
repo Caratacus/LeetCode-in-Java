@@ -21,16 +21,10 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int greaterSum = 0;
 
     public TreeNode bstToGst(TreeNode root) {
-        if (root.right != null) {
-            bstToGst(root.right);
-        }
-        greaterSum = root.val = greaterSum + root.val;
-        if (root.left != null) {
-            bstToGst(root.left);
-        }
-        return root;
+        return null;
     }
 }

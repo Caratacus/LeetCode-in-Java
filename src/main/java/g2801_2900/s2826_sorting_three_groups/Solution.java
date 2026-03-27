@@ -5,23 +5,8 @@ package g2801_2900.s2826_sorting_three_groups;
 import java.util.List;
 
 public class Solution {
-    public int minimumOperations(List<Integer> nums) {
-        int n = nums.size();
-        int[] arr = new int[3];
-        int max = 0;
-        for (Integer num : nums) {
-            int locMax = 0;
-            int value = num;
-            for (int j = 0; j < value; j++) {
-                locMax = Math.max(locMax, arr[j]);
-            }
 
-            locMax++;
-            arr[value - 1] = locMax;
-            if (locMax > max) {
-                max = locMax;
-            }
-        }
-        return n - max;
+    public int minimumOperations(List<Integer> nums) {
+        return 0;
     }
 }

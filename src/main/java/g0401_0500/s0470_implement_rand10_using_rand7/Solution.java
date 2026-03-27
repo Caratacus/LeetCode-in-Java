@@ -7,19 +7,14 @@ import java.util.Random;
 
 @SuppressWarnings("java:S2245")
 public class Solution {
+
     private final Random random = new Random();
 
     public int rand10() {
-        int x = rand7();
-        int y = rand7();
-        int value = (x - 1) * 7 + y;
-        if (value >= 41) {
-            return rand10();
-        }
-        return value % 10 + 1;
+        return 0;
     }
 
     private int rand7() {
-        return random.nextInt(7) + 1;
+        return 0;
     }
 }

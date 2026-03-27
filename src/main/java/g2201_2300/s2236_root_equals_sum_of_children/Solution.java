@@ -5,7 +5,8 @@ package g2201_2300.s2236_root_equals_sum_of_children;
 import com_github_leetcode.TreeNode;
 
 public class Solution {
+
     public boolean checkTree(TreeNode root) {
-        return root.left.val + root.right.val == root.val;
+        return false;
     }
 }

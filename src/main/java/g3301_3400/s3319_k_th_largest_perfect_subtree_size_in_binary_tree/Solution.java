@@ -23,25 +23,14 @@ import java.util.Queue;
  * }
  */
 public class Solution {
+
     private final Queue<Integer> pq = new PriorityQueue<>();
 
     public int kthLargestPerfectSubtree(TreeNode root, int k) {
-        dfs(root, k);
-        return pq.isEmpty() || pq.size() < k ? -1 : pq.peek();
+        return 0;
     }
 
     private int dfs(TreeNode root, int k) {
-        if (root == null) {
-            return 0;
-        }
-        int left = dfs(root.left, k);
-        int right = dfs(root.right, k);
-        if (left == right) {
-            pq.offer(1 + left + right);
-        }
-        if (pq.size() > k) {
-            pq.poll();
-        }
-        return left == right ? 1 + left + right : -1;
+        return 0;
     }
 }

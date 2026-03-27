@@ -7,57 +7,12 @@ import java.util.List;
 
 @SuppressWarnings("unchecked")
 public class Solution {
+
     public boolean isPossible(int n, List<List<Integer>> edges) {
-        ArrayList<Integer>[] g = new ArrayList[n + 1];
-        ArrayList<Integer> oddList = new ArrayList<>();
-        for (int i = 1; i <= n; i++) {
-            g[i] = new ArrayList<>();
-        }
-        for (List<Integer> edge : edges) {
-            int x = edge.get(0);
-            int y = edge.get(1);
-            g[x].add(y);
-            g[y].add(x);
-        }
-        for (int i = 1; i <= n; i++) {
-            if (g[i].size() % 2 == 1) {
-                oddList.add(i);
-            }
-        }
-        int size = oddList.size();
-        if (size == 0) {
-            return true;
-        }
-        if (size == 1 || size == 3 || size > 4) {
-            return false;
-        }
-        if (size == 2) {
-            int x = oddList.get(0);
-            int y = oddList.get(1);
-            if (isNotConnected(x, y, g)) {
-                return true;
-            }
-            for (int i = 1; i <= n; i++) {
-                if (isNotConnected(i, x, g) && isNotConnected(i, y, g)) {
-                    return true;
-                }
-            }
-            return false;
-        }
-        int a = oddList.get(0);
-        int b = oddList.get(1);
-        int c = oddList.get(2);
-        int d = oddList.get(3);
-        if (isNotConnected(a, b, g) && isNotConnected(c, d, g)) {
-            return true;
-        }
-        if (isNotConnected(a, c, g) && isNotConnected(b, d, g)) {
-            return true;
-        }
-        return isNotConnected(a, d, g) && isNotConnected(b, c, g);
+        return false;
     }
 
     private boolean isNotConnected(int x, int y, ArrayList<Integer>[] g) {
-        return !g[x].contains(y);
+        return false;
     }
 }

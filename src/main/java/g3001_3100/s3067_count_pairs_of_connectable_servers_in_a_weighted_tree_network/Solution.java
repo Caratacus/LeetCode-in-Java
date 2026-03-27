@@ -6,40 +6,11 @@ import java.util.ArrayList;
 
 @SuppressWarnings("unchecked")
 public class Solution {
+
     private ArrayList<Integer>[] adj;
 
     public int[] countPairsOfConnectableServers(int[][] edges, int signalSpeed) {
-        int n = edges.length + 1;
-        adj = new ArrayList[n];
-        for (int i = 0; i < n; i++) {
-            adj[i] = new ArrayList<>();
-        }
-        for (int[] edge : edges) {
-            int u = edge[0];
-            int v = edge[1];
-            int w = edge[2];
-            adj[u].add(v);
-            adj[v].add(u);
-            adj[u].add(w);
-            adj[v].add(w);
-        }
-        int[] res = new int[n];
-        for (int i = 0; i < n; i++) {
-            if (adj[i].size() > 2) {
-                ArrayList<Integer> al = new ArrayList<>();
-                for (int j = 0; j < adj[i].size(); j += 2) {
-                    int[] cnt = new int[1];
-                    dfs(adj[i].get(j), i, adj[i].get(j + 1), cnt, signalSpeed);
-                    al.add(cnt[0]);
-                }
-                int sum = 0;
-                for (int j : al) {
-                    res[i] += (sum * j);
-                    sum += j;
-                }
-            }
-        }
-        return res;
+        return null;
     }
 
     void dfs(int node, int par, int sum, int[] cnt, int ss) {

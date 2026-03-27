@@ -7,6 +7,7 @@ import java.util.Random;
 
 @SuppressWarnings("java:S2245")
 public class Solution {
+
     private final double radius;
     private final double xCenter;
     private final double yCenter;
@@ -19,26 +20,14 @@ public class Solution {
     }
 
     public double[] randPoint() {
-        double x = getCoordinate(xCenter);
-        double y = getCoordinate(yCenter);
-        while (getDistance(x, y) >= radius * radius) {
-            x = getCoordinate(xCenter);
-            y = getCoordinate(yCenter);
-        }
-        return new double[] {x, y};
+        return null;
     }
 
     private double getDistance(double x, double y) {
-        return (xCenter - x) * (xCenter - x) + (yCenter - y) * (yCenter - y);
+        return 0.0;
     }
 
     private double getCoordinate(double center) {
-        return center - radius + random.nextDouble() * 2 * radius;
+        return 0.0;
     }
 }
-
-/*
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(radius, x_center, y_center);
- * double[] param_1 = obj.randPoint();
- */

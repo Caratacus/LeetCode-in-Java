@@ -9,6 +9,7 @@ import java.util.Set;
 
 @SuppressWarnings("java:S2245")
 public class Solution {
+
     private final int cols;
     private final int total;
     private final Random rand;
@@ -22,16 +23,8 @@ public class Solution {
     }
 
     public int[] flip() {
-        int x = rand.nextInt(this.total);
-        while (available.contains(x)) {
-            x = rand.nextInt(this.total);
-        }
-
-        this.available.add(x);
-        return new int[] {x / this.cols, x % this.cols};
+        return null;
     }
 
-    public void reset() {
-        this.available.clear();
-    }
+    public void reset() {}
 }

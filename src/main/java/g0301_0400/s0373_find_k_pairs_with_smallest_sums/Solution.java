@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class Solution {
+
     private static class Node {
         long sum;
         List<Integer> al;

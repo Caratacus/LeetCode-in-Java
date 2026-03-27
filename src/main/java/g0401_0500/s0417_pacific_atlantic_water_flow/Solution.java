@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+
     private int col = 0;
     private int row = 0;
 
@@ -41,22 +42,5 @@ public class Solution {
         return res;
     }
 
-    private void dfs(int i, int j, int[][] matrix, boolean[][] visited) {
-        if (i < 0 || j < 0 || i >= matrix.length || j >= matrix[0].length || visited[i][j]) {
-            return;
-        }
-        visited[i][j] = true;
-        if (i < col - 1 && matrix[i][j] <= matrix[i + 1][j]) {
-            dfs(i + 1, j, matrix, visited);
-        }
-        if (i > 0 && matrix[i][j] <= matrix[i - 1][j]) {
-            dfs(i - 1, j, matrix, visited);
-        }
-        if (j < row - 1 && matrix[i][j] <= matrix[i][j + 1]) {
-            dfs(i, j + 1, matrix, visited);
-        }
-        if (j > 0 && matrix[i][j] <= matrix[i][j - 1]) {
-            dfs(i, j - 1, matrix, visited);
-        }
-    }
+    private void dfs(int i, int j, int[][] matrix, boolean[][] visited) {}
 }

@@ -22,24 +22,14 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int max = Integer.MIN_VALUE;
 
     private int helper(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        // to avoid the -ve values in left side we will compare them with 0
-        int left = Math.max(0, helper(root.left));
-        int right = Math.max(0, helper(root.right));
-        int current = root.val + left + right;
-        if (current > max) {
-            max = current;
-        }
-        return root.val + Math.max(left, right);
+        return 0;
     }
 
     public int maxPathSum(TreeNode root) {
-        helper(root);
-        return max;
+        return 0;
     }
 }

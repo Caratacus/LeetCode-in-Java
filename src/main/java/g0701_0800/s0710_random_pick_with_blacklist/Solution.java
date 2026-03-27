@@ -9,6 +9,7 @@ import java.util.Random;
 
 @SuppressWarnings("java:S2245")
 public class Solution {
+
     private final Map<Integer, Integer> map;
     private final Random r;
     private final int upperLimit;
@@ -33,10 +34,6 @@ public class Solution {
     }
 
     public int pick() {
-        int val = r.nextInt(upperLimit);
-        if (map.containsKey(val)) {
-            return map.get(val);
-        }
-        return val;
+        return 0;
     }
 }

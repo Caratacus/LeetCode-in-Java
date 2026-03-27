@@ -3,12 +3,11 @@ package g3601_3700.s3607_power_grid_maintenance;
 // #Medium #Array #Hash_Table #Depth_First_Search #Breadth_First_Search #Heap_Priority_Queue #Graph
 // #Union_Find #Ordered_Set #2025_07_08_Time_84_ms_(94.64%)_Space_131.60_MB_(76.86%)
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.PriorityQueue;
 
 @SuppressWarnings("unchecked")
 public class Solution {
+
     private static class UF {
         int[] par;
         PriorityQueue<Integer>[] pq;
@@ -70,20 +69,6 @@ public class Solution {
     }
 
     public int[] processQueries(int c, int[][] connections, int[][] queries) {
-        UF uf = new UF(c);
-        for (int[] con : connections) {
-            int u = con[0];
-            int v = con[1];
-            uf.union(u - 1, v - 1);
-        }
-        List<Integer> res = new ArrayList<>();
-        for (int[] q : queries) {
-            if (q[0] == 1) {
-                res.add(uf.check(q[1] - 1) + 1);
-            } else {
-                uf.inactive(q[1] - 1);
-            }
-        }
-        return res.stream().mapToInt(Integer::intValue).toArray();
+        return null;
     }
 }

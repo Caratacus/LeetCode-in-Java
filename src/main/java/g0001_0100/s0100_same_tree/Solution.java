@@ -22,12 +22,8 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public boolean isSameTree(TreeNode p, TreeNode q) {
-        if (p == null || q == null) {
-            return p == null && q == null;
-        }
-        boolean b1 = isSameTree(p.left, q.left);
-        boolean b2 = isSameTree(p.right, q.right);
-        return p.val == q.val && b1 && b2;
+        return false;
     }
 }

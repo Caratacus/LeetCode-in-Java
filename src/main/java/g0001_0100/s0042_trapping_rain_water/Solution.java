@@ -6,34 +6,8 @@ package g0001_0100.s0042_trapping_rain_water;
 // #2024_11_10_Time_0_ms_(100.00%)_Space_46.2_MB_(57.86%)
 
 public class Solution {
+
     public int trap(int[] height) {
-        int l = 0;
-        int r = height.length - 1;
-        int res = 0;
-        int lowerWall = 0;
-        while (l < r) {
-            int lVal = height[l];
-            int rVal = height[r];
-            // If left is smaller than right ptr, make the lower wall the bigger of lVal and its
-            // current size
-            if (lVal < rVal) {
-                // If lVal has gone up, move the lowerWall upp
-                lowerWall = Math.max(lVal, lowerWall);
-                // Add the water level at current point
-                // Calculate this by taking the current value and subtracting it from the lower wall
-                // size
-                // We know that this is the lower wall because we've already determined that lVal <
-                // rVal
-                res += lowerWall - lVal;
-                // Move left ptr along
-                l++;
-            } else {
-                // Do the same thing, except now we know that the lowerWall is the right side.
-                lowerWall = Math.max(rVal, lowerWall);
-                res += lowerWall - rVal;
-                r--;
-            }
-        }
-        return res;
+        return 0;
     }
 }

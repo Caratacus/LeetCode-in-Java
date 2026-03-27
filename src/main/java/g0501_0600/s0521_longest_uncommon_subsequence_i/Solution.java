@@ -3,6 +3,7 @@ package g0501_0600.s0521_longest_uncommon_subsequence_i;
 // #Easy #String #2022_07_28_Time_0_ms_(100.00%)_Space_40.2_MB_(87.89%)
 
 public class Solution {
+
     /*
      * The gotcha point of this question is:
      * 1. if a and b are identical, then there will be no common subsequence, return -1
@@ -13,9 +14,6 @@ public class Solution {
      * so return Math.max(a.length(), b.length())
      */
     public int findLUSlength(String a, String b) {
-        if (a.equals(b)) {
-            return -1;
-        }
-        return Math.max(a.length(), b.length());
+        return 0;
     }
 }

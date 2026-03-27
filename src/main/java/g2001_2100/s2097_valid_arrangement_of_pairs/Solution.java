@@ -5,17 +5,12 @@ package g2001_2100.s2097_valid_arrangement_of_pairs;
 
 import java.util.HashMap;
 import java.util.LinkedList;
-import java.util.Map;
 import java.util.Queue;
 
 public class Solution {
+
     public int[][] validArrangement(int[][] pairs) {
-        HashMap<Integer, int[]> inOutedge = new HashMap<>();
-        HashMap<Integer, Queue<Integer>> adList = getAdList(pairs, inOutedge);
-        int start = getStart(inOutedge);
-        int[][] res = new int[pairs.length][2];
-        getRes(start, adList, res, pairs.length - 1);
-        return res;
+        return null;
     }
 
     private HashMap<Integer, Queue<Integer>> getAdList(
@@ -35,29 +30,10 @@ public class Solution {
     }
 
     private int getRes(int k, HashMap<Integer, Queue<Integer>> adList, int[][] res, int idx) {
-        Queue<Integer> edges = adList.get(k);
-        if (edges == null) {
-            return idx;
-        }
-        while (!edges.isEmpty()) {
-            int edge = edges.poll();
-            idx = getRes(edge, adList, res, idx);
-            res[idx--] = new int[] {k, edge};
-        }
-        return idx;
+        return 0;
     }
 
     private int getStart(HashMap<Integer, int[]> map) {
-        int start = -1;
-        for (Map.Entry<Integer, int[]> entry : map.entrySet()) {
-            int k = entry.getKey();
-            int inEdge = entry.getValue()[0];
-            int outEdge = entry.getValue()[1];
-            start = k;
-            if (outEdge - inEdge == 1) {
-                return k;
-            }
-        }
-        return start;
+        return 0;
     }
 }

@@ -5,9 +5,7 @@ package g2401_2500.s2415_reverse_odd_levels_of_binary_tree;
 
 import com_github_leetcode.TreeNode;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 
 /*
  * Definition for a binary tree node.
@@ -25,48 +23,16 @@ import java.util.Queue;
  * }
  */
 public class Solution {
+
     private List<Integer> list = new ArrayList<>();
 
     public TreeNode reverseOddLevels(TreeNode root) {
-        solve(root);
-        return enrich(list, 0);
+        return null;
     }
 
     private TreeNode enrich(List<Integer> list, int i) {
-        TreeNode root = null;
-        if (i < list.size()) {
-            root = new TreeNode(list.get(i));
-            root.left = enrich(list, 2 * i + 1);
-            root.right = enrich(list, 2 * i + 2);
-        }
-        return root;
+        return null;
     }
 
-    private void solve(TreeNode root) {
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
-        int level = 0;
-        while (!q.isEmpty()) {
-            int size = q.size();
-            List<Integer> res = new ArrayList<>();
-            for (int i = 0; i < size; i++) {
-                TreeNode cur = q.remove();
-                res.add(cur.val);
-                if (cur.left != null) {
-                    q.add(cur.left);
-                }
-                if (cur.right != null) {
-                    q.add(cur.right);
-                }
-            }
-            if (level % 2 != 0) {
-                for (int i = res.size() - 1; i >= 0; i--) {
-                    list.add(res.get(i));
-                }
-            } else {
-                list.addAll(res);
-            }
-            level++;
-        }
-    }
+    private void solve(TreeNode root) {}
 }

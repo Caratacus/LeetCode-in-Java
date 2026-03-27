@@ -32,25 +32,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public boolean isSubPath(ListNode head, TreeNode root) {
-        if (root == null) {
-            return false;
-        }
-        return doesRootHaveList(head, root)
-                || isSubPath(head, root.left)
-                || isSubPath(head, root.right);
+        return false;
     }
 
     private boolean doesRootHaveList(ListNode head, TreeNode root) {
-        if (head == null) {
-            return true;
-        }
-        if (root == null) {
-            return false;
-        }
-
-        return head.val == root.val
-                && (doesRootHaveList(head.next, root.left)
-                        || doesRootHaveList(head.next, root.right));
+        return false;
     }
 }

@@ -5,13 +5,8 @@ package g3201_3300.s3282_reach_end_of_array_with_max_score;
 import java.util.List;
 
 public class Solution {
+
     public long findMaximumScore(List<Integer> nums) {
-        long res = 0;
-        long ma = 0;
-        for (int num : nums) {
-            res += ma;
-            ma = Math.max(ma, num);
-        }
-        return res;
+        return 0L;
     }
 }

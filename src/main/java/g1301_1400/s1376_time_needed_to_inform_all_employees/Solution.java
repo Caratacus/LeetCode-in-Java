@@ -5,25 +5,12 @@ package g1301_1400.s1376_time_needed_to_inform_all_employees;
 
 @SuppressWarnings("java:S1172")
 public class Solution {
+
     private int numMinsDFS(int index, int[] manager, int[] informTime) {
-        if (manager[index] != -1) {
-            informTime[index] += numMinsDFS(manager[index], manager, informTime);
-            manager[index] = -1;
-        }
-        return informTime[index];
+        return 0;
     }
 
     public int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
-        int time = informTime[headID];
-        for (int i = 0; i < n; i++) {
-            if (informTime[i] == 0) {
-                continue;
-            }
-            int timei = numMinsDFS(i, manager, informTime);
-            if (timei > time) {
-                time = timei;
-            }
-        }
-        return time;
+        return 0;
     }
 }

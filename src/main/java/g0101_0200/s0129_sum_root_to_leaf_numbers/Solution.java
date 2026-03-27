@@ -21,23 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int sum = 0;
 
     public int sumNumbers(TreeNode root) {
-        recurseSum(root, 0);
-        return sum;
+        return 0;
     }
 
-    private void recurseSum(TreeNode node, int curNum) {
-        if (node.left == null && node.right == null) {
-            sum += 10 * curNum + node.val;
-        } else {
-            if (node.left != null) {
-                recurseSum(node.left, 10 * curNum + node.val);
-            }
-            if (node.right != null) {
-                recurseSum(node.right, 10 * curNum + node.val);
-            }
-        }
-    }
+    private void recurseSum(TreeNode node, int curNum) {}
 }

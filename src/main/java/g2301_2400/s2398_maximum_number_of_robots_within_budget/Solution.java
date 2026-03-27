@@ -13,34 +13,6 @@ public class Solution {
     //       if [0,3] is invalid, next time we will try [1,4],
     //         by adjusting the window to [1,3] first in the current round.
     public int maximumRobots(int[] chargeTimes, int[] runningCosts, long budget) {
-        int n = chargeTimes.length;
-        // [front, end).
-        int[] deque = new int[n];
-        int front = 0;
-        int end = 0;
-        long sum = 0;
-        int left = 0;
-        int right = 0;
-        for (; right < n; ++right) {
-            // add right into the sliding window, so the window becomes [left, right].
-            // update sliding window max and window sum.
-            while (end - front > 0 && chargeTimes[deque[end - 1]] <= chargeTimes[right]) {
-                --end;
-            }
-            deque[end++] = right;
-            sum += runningCosts[right];
-            // if the condition is met in the window, do nothing,
-            // so the next window size will become one larger.
-            // if the condition is not met in the window, shrink one from the front,
-            // so the next window size will stay the same.
-            if (chargeTimes[deque[front]] + (right - left + 1) * sum > budget) {
-                while (end - front > 0 && deque[front] <= left) {
-                    ++front;
-                }
-                sum -= runningCosts[left];
-                ++left;
-            }
-        }
-        return right - left;
+        return 0;
     }
 }

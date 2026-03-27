@@ -4,6 +4,7 @@ package g0301_0400.s0309_best_time_to_buy_and_sell_stock_with_cooldown;
 // #2022_07_07_Time_0_ms_(100.00%)_Space_42.3_MB_(44.85%)
 
 public class Solution {
+
     /*
      * The series of problems are typical dp. The key for dp is to find the variables to
      * represent the states and deduce the transition function.
@@ -54,16 +55,6 @@ public class Solution {
      * And here we are at our final solution:
      */
     public int maxProfit(int[] prices) {
-        int sell = 0;
-        int prevSell = 0;
-        int buy = Integer.MIN_VALUE;
-        int prevBuy;
-        for (int price : prices) {
-            prevBuy = buy;
-            buy = Math.max(prevSell - price, prevBuy);
-            prevSell = sell;
-            sell = Math.max(prevBuy + price, prevSell);
-        }
-        return sell;
+        return 0;
     }
 }

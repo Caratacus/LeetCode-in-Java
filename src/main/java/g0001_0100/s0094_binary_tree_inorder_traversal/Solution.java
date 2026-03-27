@@ -5,8 +5,6 @@ package g0001_0100.s0094_binary_tree_inorder_traversal;
 // #2024_11_13_Time_0_ms_(100.00%)_Space_41.6_MB_(47.93%)
 
 import com_github_leetcode.TreeNode;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /*
@@ -25,25 +23,10 @@ import java.util.List;
  * }
  */
 public class Solution {
+
     public List<Integer> inorderTraversal(TreeNode root) {
-        if (root == null) {
-            return Collections.emptyList();
-        }
-        List<Integer> answer = new ArrayList<>();
-        inorderTraversal(root, answer);
-        return answer;
+        return null;
     }
 
-    public void inorderTraversal(TreeNode root, List<Integer> answer) {
-        if (root == null) {
-            return;
-        }
-        if (root.left != null) {
-            inorderTraversal(root.left, answer);
-        }
-        answer.add(root.val);
-        if (root.right != null) {
-            inorderTraversal(root.right, answer);
-        }
-    }
+    public void inorderTraversal(TreeNode root, List<Integer> answer) {}
 }

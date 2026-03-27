@@ -15,39 +15,12 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public ListNode doubleIt(ListNode head) {
-        ListNode temp1 = revList(head);
-        ListNode list1 = null;
-        ListNode current = list1;
-        int carry = 0;
-        while (temp1 != null) {
-            int val = temp1.val * 2;
-            if (list1 == null) {
-                list1 = new ListNode(val % 10 + carry);
-                current = list1;
-            } else {
-                current.next = new ListNode(val % 10 + carry);
-                current = current.next;
-            }
-            carry = val / 10;
-            temp1 = temp1.next;
-        }
-        if (carry == 1) {
-            current.next = new ListNode(carry);
-        }
-        return revList(list1);
+        return null;
     }
 
     private ListNode revList(ListNode head) {
-        ListNode prev = null;
-        ListNode nxt;
-        ListNode current = head;
-        while (current != null) {
-            nxt = current.next;
-            current.next = prev;
-            prev = current;
-            current = nxt;
-        }
-        return prev;
+        return null;
     }
 }

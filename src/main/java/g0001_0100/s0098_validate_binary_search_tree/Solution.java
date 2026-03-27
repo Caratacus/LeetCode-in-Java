@@ -23,19 +23,14 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public boolean isValidBST(TreeNode root) {
-        return solve(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        return false;
     }
 
     // we will send a valid range and check whether the root lies in the range
     // and update the range for the subtrees
     private boolean solve(TreeNode root, long left, long right) {
-        if (root == null) {
-            return true;
-        }
-        if (root.val <= left || root.val >= right) {
-            return false;
-        }
-        return solve(root.left, left, root.val) && solve(root.right, root.val, right);
+        return false;
     }
 }

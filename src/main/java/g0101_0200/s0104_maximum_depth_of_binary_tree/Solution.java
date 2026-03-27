@@ -24,16 +24,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public int maxDepth(TreeNode root) {
-        return findDepth(root, 0);
+        return 0;
     }
 
     private int findDepth(TreeNode node, int currentDepth) {
-        if (node == null) {
-            return 0;
-        }
-        currentDepth++;
-        return 1
-                + Math.max(findDepth(node.left, currentDepth), findDepth(node.right, currentDepth));
+        return 0;
     }
 }

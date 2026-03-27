@@ -24,6 +24,7 @@ import java.util.List;
  * }
  */
 public class Solution {
+
     private List<List<Integer>> order = new ArrayList<>();
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
@@ -32,14 +33,5 @@ public class Solution {
         return order;
     }
 
-    public void getOrder(TreeNode root, int level) {
-        if (root != null) {
-            if (level + 1 > order.size()) {
-                order.add(new ArrayList<>());
-            }
-            order.get(level).add(root.val);
-            getOrder(root.left, level + 1);
-            getOrder(root.right, level + 1);
-        }
-    }
+    public void getOrder(TreeNode root, int level) {}
 }

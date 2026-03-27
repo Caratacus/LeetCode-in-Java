@@ -12,6 +12,7 @@ import java.util.Set;
 
 @SuppressWarnings({"unchecked", "java:S106"})
 public class Solution {
+
     public List<List<Integer>> findCriticalAndPseudoCriticalEdges(int n, int[][] edges) {
         // {w, ind}
         int[][][] g = new int[n][n][2];
@@ -69,31 +70,11 @@ public class Solution {
 
     private boolean path(
             int f, int t, int w, int p, List<Integer>[] mst, int[][][] g, Set<Integer> ind) {
-        if (f == t) {
-            return true;
-        }
-        for (int nbr : mst[f]) {
-            if (p != nbr && path(nbr, t, w, f, mst, g, ind)) {
-                if (g[f][nbr][0] == w) {
-                    ind.add(g[f][nbr][1]);
-                }
-                return true;
-            }
-        }
         return false;
     }
 
-    private void buildMST(int n, int[][] edges, boolean[] mste, List<Integer>[] mstg, int[][][] g) {
-        DisjointSet ds = new DisjointSet(n);
-        for (int[] ints : edges) {
-            if (ds.union(ints[0], ints[1])) {
-                int[] edge = ints;
-                mstg[edge[0]].add(edge[1]);
-                mstg[edge[1]].add(edge[0]);
-                mste[g[edge[0]][edge[1]][1]] = true;
-            }
-        }
-    }
+    private void buildMST(
+            int n, int[][] edges, boolean[] mste, List<Integer>[] mstg, int[][][] g) {}
 
     private static class DisjointSet {
         int[] parent;
@@ -106,21 +87,11 @@ public class Solution {
         }
 
         public int find(int i) {
-            if (i == parent[i]) {
-                return i;
-            }
-            parent[i] = find(parent[i]);
-            return parent[i];
+            return 0;
         }
 
         public boolean union(int u, int v) {
-            int pu = find(u);
-            int pv = find(v);
-            if (pu == pv) {
-                return false;
-            }
-            parent[pu] = pv;
-            return true;
+            return false;
         }
     }
 }

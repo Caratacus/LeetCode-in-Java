@@ -21,19 +21,11 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int prev = -1;
     private int min = Integer.MAX_VALUE;
 
     public int minDiffInBST(TreeNode root) {
-        if (root == null) {
-            return min;
-        }
-        minDiffInBST(root.left);
-        if (prev != -1) {
-            min = Math.min(min, Math.abs(root.val - prev));
-        }
-        prev = root.val;
-        minDiffInBST(root.right);
-        return min;
+        return 0;
     }
 }

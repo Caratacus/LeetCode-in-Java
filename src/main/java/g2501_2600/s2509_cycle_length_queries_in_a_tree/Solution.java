@@ -4,23 +4,8 @@ package g2501_2600.s2509_cycle_length_queries_in_a_tree;
 
 @SuppressWarnings("java:S1172")
 public class Solution {
+
     public int[] cycleLengthQueries(int n, int[][] queries) {
-        int m = queries.length;
-        int[] res = new int[m];
-        for (int i = 0; i < m; i++) {
-            int a = queries[i][0];
-            int b = queries[i][1];
-            int count = 1;
-            while (a != b) {
-                if (a > b) {
-                    a = a >> 1;
-                } else {
-                    b = b >> 1;
-                }
-                count++;
-            }
-            res[i] = count;
-        }
-        return res;
+        return null;
     }
 }

@@ -21,27 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int max = 0;
 
     public int maxAncestorDiff(TreeNode root) {
-        traverse(root, -1, -1);
-        return max;
+        return 0;
     }
 
-    private void traverse(TreeNode root, int maxAncestor, int minAncestor) {
-        if (root == null) {
-            return;
-        }
-        if (maxAncestor == -1) {
-            traverse(root.left, root.val, root.val);
-            traverse(root.right, root.val, root.val);
-        }
-        if (maxAncestor != -1) {
-            max = Math.max(max, Math.abs(maxAncestor - root.val));
-            max = Math.max(max, Math.abs(minAncestor - root.val));
-
-            traverse(root.left, Math.max(root.val, maxAncestor), Math.min(root.val, minAncestor));
-            traverse(root.right, Math.max(root.val, maxAncestor), Math.min(root.val, minAncestor));
-        }
-    }
+    private void traverse(TreeNode root, int maxAncestor, int minAncestor) {}
 }

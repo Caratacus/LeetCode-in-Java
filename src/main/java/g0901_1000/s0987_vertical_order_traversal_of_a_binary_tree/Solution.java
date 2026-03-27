@@ -7,7 +7,6 @@ import com_github_leetcode.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.TreeMap;
 
@@ -27,6 +26,7 @@ import java.util.TreeMap;
  * }
  */
 public class Solution {
+
     private static class Node {
         int row;
         int val;
@@ -52,14 +52,5 @@ public class Solution {
         return ret;
     }
 
-    private void helper(TreeNode cur, TreeMap<Integer, Queue<Node>> map, int r, int c) {
-        if (cur == null) {
-            return;
-        }
-        map.putIfAbsent(
-                c, new PriorityQueue<>((a, b) -> a.row != b.row ? a.row - b.row : a.val - b.val));
-        map.get(c).add(new Node(r, cur.val));
-        helper(cur.left, map, r + 1, c - 1);
-        helper(cur.right, map, r + 1, c + 1);
-    }
+    private void helper(TreeNode cur, TreeMap<Integer, Queue<Node>> map, int r, int c) {}
 }

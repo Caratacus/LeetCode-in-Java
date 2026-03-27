@@ -23,9 +23,9 @@ import java.util.HashMap;
  * }
  */
 public class Solution {
+
     public int pathSum(TreeNode root, int targetSum) {
-        HashMap<Long, Integer> h = new HashMap<>();
-        return dfs(root, targetSum, h, 0L);
+        return 0;
     }
 
     int dfs(TreeNode root, int t, HashMap<Long, Integer> h, Long cs) {

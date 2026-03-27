@@ -3,12 +3,9 @@ package g3401_3500.s3454_separate_squares_ii;
 // #Hard #Array #Binary_Search #Segment_Tree #Line_Sweep
 // #2025_02_18_Time_156_ms_(80.18%)_Space_79.96_MB_(64.32%)
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
 @SuppressWarnings("java:S1210")
 public class Solution {
+
     private static class Event implements Comparable<Event> {
         double y;
         int x1;
@@ -23,7 +20,7 @@ public class Solution {
         }
 
         public int compareTo(Event other) {
-            return Double.compare(this.y, other.y);
+            return 0;
         }
     }
 
@@ -86,70 +83,6 @@ public class Solution {
     }
 
     public double separateSquares(int[][] squares) {
-        int n = squares.length;
-        Event[] events = new Event[2 * n];
-        int idx = 0;
-        List<Integer> xList = new ArrayList<>();
-        for (int[] s : squares) {
-            int x = s[0];
-            int y = s[1];
-            int l = s[2];
-            int x2 = x + l;
-            int y2 = y + l;
-            events[idx++] = new Event(y, x, x2, 1);
-            events[idx++] = new Event(y2, x, x2, -1);
-            xList.add(x);
-            xList.add(x2);
-        }
-        Arrays.sort(events);
-        int m = xList.size();
-        int[] xCords = new int[m];
-        for (int i = 0; i < m; i++) {
-            xCords[i] = xList.get(i);
-        }
-        Arrays.sort(xCords);
-        int uniqueCount = 0;
-        for (int i = 0; i < m; i++) {
-            if (i == 0 || xCords[i] != xCords[i - 1]) {
-                xCords[uniqueCount++] = xCords[i];
-            }
-        }
-        int[] x = Arrays.copyOf(xCords, uniqueCount);
-        SegmentTree segTree = new SegmentTree(x);
-        List<Segment> segments = new ArrayList<>();
-        double cumArea = 0.0;
-        double lastY = events[0].y;
-        int iEvent = 0;
-        while (iEvent < events.length) {
-            double currentY = events[iEvent].y;
-            double delta = currentY - lastY;
-            if (delta > 0) {
-                double unionX = segTree.query();
-                segments.add(new Segment(lastY, currentY, unionX, cumArea));
-                cumArea += unionX * delta;
-            }
-            while (iEvent < events.length && events[iEvent].y == currentY) {
-                Event e = events[iEvent];
-                int left = Arrays.binarySearch(x, e.x1);
-                int right = Arrays.binarySearch(x, e.x2);
-                if (left < right) {
-                    segTree.update(left, right - 1, e.type);
-                }
-                iEvent++;
-            }
-            lastY = currentY;
-        }
-        double totalArea = cumArea;
-        double target = totalArea / 2.0;
-        double answer;
-        for (Segment seg : segments) {
-            double segArea = seg.unionX * (seg.y2 - seg.y1);
-            if (seg.cumArea + segArea >= target) {
-                double needed = target - seg.cumArea;
-                answer = seg.y1 + needed / seg.unionX;
-                return answer;
-            }
-        }
-        return lastY;
+        return 0.0;
     }
 }

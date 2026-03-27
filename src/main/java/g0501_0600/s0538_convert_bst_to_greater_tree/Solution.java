@@ -21,23 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public TreeNode convertBST(TreeNode root) {
-        if (root != null) {
-            postOrder(root, 0);
-        }
-        return root;
+        return null;
     }
 
     private int postOrder(TreeNode node, int val) {
-        int newVal = 0;
-        if (node.right != null) {
-            newVal += postOrder(node.right, val);
-        }
-        newVal += newVal == 0 ? val + node.val : node.val;
-        node.val = newVal;
-        if (node.left != null) {
-            newVal = postOrder(node.left, newVal);
-        }
-        return newVal;
+        return 0;
     }
 }

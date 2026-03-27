@@ -10,6 +10,7 @@ import java.util.Set;
 
 @SuppressWarnings("java:S5413")
 public class Solution {
+
     public List<List<Integer>> findSubsequences(int[] nums) {
         if (nums == null || nums.length == 1) {
             return new ArrayList<>();

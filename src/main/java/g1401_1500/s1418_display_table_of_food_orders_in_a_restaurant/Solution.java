@@ -13,6 +13,7 @@ import java.util.Set;
 import java.util.TreeMap;
 
 public class Solution {
+
     public List<List<String>> displayTable(List<List<String>> orders) {
         TreeMap<Integer, Map<String, Integer>> map = new TreeMap<>();
         Set<String> dishSet = new HashSet<>();

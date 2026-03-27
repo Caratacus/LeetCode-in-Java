@@ -4,7 +4,6 @@ package g0101_0200.s0145_binary_tree_postorder_traversal;
 // #Udemy_Tree_Stack_Queue #2022_06_24_Time_1_ms_(49.11%)_Space_42_MB_(62.15%)
 
 import com_github_leetcode.TreeNode;
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -23,13 +22,8 @@ import java.util.List;
  * }
  */
 public class Solution {
+
     public List<Integer> postorderTraversal(TreeNode root) {
-        if (root == null) {
-            return new ArrayList<>();
-        }
-        List<Integer> res = postorderTraversal(root.left);
-        res.addAll(postorderTraversal(root.right));
-        res.add(root.val);
-        return res;
+        return null;
     }
 }

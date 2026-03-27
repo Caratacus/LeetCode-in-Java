@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+
     public List<List<Integer>> findMatrix(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
         int n = nums.length;

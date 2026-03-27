@@ -15,25 +15,8 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public ListNode swapNodes(ListNode head, int k) {
-        ListNode beg = null;
-        ListNode end = null;
-        ListNode node = head;
-        while (node != null) {
-            k--;
-            if (k == 0) {
-                beg = node;
-                end = head;
-            } else if (end != null) {
-                end = end.next;
-            }
-            node = node.next;
-        }
-        if (beg != null) {
-            int tem = beg.val;
-            beg.val = end.val;
-            end.val = tem;
-        }
-        return head;
+        return null;
     }
 }

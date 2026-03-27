@@ -5,6 +5,7 @@ package g2801_2900.s2861_maximum_number_of_alloys;
 import java.util.List;
 
 public class Solution {
+
     public int maxNumberOfAlloys(
             int n,
             int k,
@@ -12,28 +13,7 @@ public class Solution {
             List<List<Integer>> composition,
             List<Integer> stock,
             List<Integer> cost) {
-        int ans = 0;
-        int max = 0;
-        for (int i = 0; i < n; i++) {
-            max = Math.max(stock.get(i), max);
-        }
-        for (int i = 0; i < k; i++) {
-            int temp = 0;
-            int low = 0;
-            int high = max + budget;
-            int mid;
-            while (low <= high) {
-                mid = low + (high - low) / 2;
-                if (isPos(i, mid, n, budget, composition, stock, cost)) {
-                    low = mid + 1;
-                    temp = mid;
-                } else {
-                    high = mid - 1;
-                }
-            }
-            ans = Math.max(ans, temp);
-        }
-        return ans;
+        return 0;
     }
 
     private boolean isPos(
@@ -44,18 +24,6 @@ public class Solution {
             List<List<Integer>> composition,
             List<Integer> stock,
             List<Integer> cost) {
-        long paiSa = 0L;
-        for (int i = 0; i < n; i++) {
-            long require = ((long) composition.get(idx).get(i)) * (mid);
-            long have = stock.get(i);
-            long diff = require - have;
-            if (diff > 0) {
-                paiSa += diff * ((long) cost.get(i));
-            }
-            if (budget < paiSa) {
-                return false;
-            }
-        }
-        return budget >= paiSa;
+        return false;
     }
 }

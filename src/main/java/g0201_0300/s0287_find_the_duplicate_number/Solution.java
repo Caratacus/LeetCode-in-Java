@@ -5,14 +5,8 @@ package g0201_0300.s0287_find_the_duplicate_number;
 // #2024_11_16_Time_2_ms_(97.52%)_Space_59.9_MB_(5.22%)
 
 public class Solution {
+
     public int findDuplicate(int[] nums) {
-        int[] arr = new int[nums.length + 1];
-        for (int num : nums) {
-            arr[num] += 1;
-            if (arr[num] == 2) {
-                return num;
-            }
-        }
         return 0;
     }
 }

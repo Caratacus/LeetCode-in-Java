@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
+
     public List<List<Integer>> mergeSimilarItems(int[][] arr1, int[][] arr2) {
         int[] cache = new int[1001];
         for (int[] num : arr1) {

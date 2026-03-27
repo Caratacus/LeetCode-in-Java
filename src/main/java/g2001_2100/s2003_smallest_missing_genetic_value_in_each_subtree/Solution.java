@@ -7,33 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+
     public int[] smallestMissingValueSubtree(int[] parents, int[] nums) {
-        int[] ans = new int[parents.length];
-        Node[] all = new Node[parents.length];
-        int max = 0;
-        for (int i = 0; i < nums.length; i++) {
-            all[i] = new Node(i, nums[i]);
-            max = Math.max(max, nums[i]);
-        }
-        for (int i = 1; i < parents.length; i++) {
-            all[parents[i]].nodes.add(all[i]);
-        }
-        solve(all[0], ans, new UF(++max, nums));
-        return ans;
+        return null;
     }
 
-    private void solve(Node root, int[] ans, UF uf) {
-        int max = 1;
-        for (Node child : root.nodes) {
-            solve(child, ans, uf);
-            uf.union(root.val, child.val);
-            max = Math.max(ans[child.idx], max);
-        }
-        while (max <= ans.length && uf.isConnected(max, root.val)) {
-            ++max;
-        }
-        ans[root.idx] = max;
-    }
+    private void solve(Node root, int[] ans, UF uf) {}
 
     private static class Node {
         int idx;
@@ -60,28 +39,13 @@ public class Solution {
         }
 
         private int find(int x) {
-            if (x == parent[x]) {
-                return x;
-            }
-            parent[x] = find(parent[x]);
-            return parent[x];
+            return 0;
         }
 
-        private void union(int x, int y) {
-            x = find(x);
-            y = find(y);
-            if (rank[x] > rank[y]) {
-                parent[y] = x;
-            } else {
-                parent[x] = y;
-                if (rank[x] == rank[y]) {
-                    rank[y]++;
-                }
-            }
-        }
+        private void union(int x, int y) {}
 
         private boolean isConnected(int x, int y) {
-            return find(x) == find(y);
+            return false;
         }
     }
 }

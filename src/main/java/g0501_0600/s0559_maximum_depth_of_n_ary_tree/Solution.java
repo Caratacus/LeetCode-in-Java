@@ -24,28 +24,12 @@ class Node {
 };
 */
 public class Solution {
+
     private int max = 0;
 
     public int maxDepth(Node root) {
-        if (root == null) {
-            return 0;
-        }
-        if (root.neighbors == null || root.neighbors.isEmpty()) {
-            return 1;
-        }
-        for (Node child : root.neighbors) {
-            findDepth(child, 1);
-        }
-        return max;
+        return 0;
     }
 
-    private void findDepth(Node n, int d) {
-        if (n.neighbors != null && !n.neighbors.isEmpty()) {
-            for (Node no : n.neighbors) {
-                findDepth(no, d + 1);
-            }
-        } else {
-            max = Math.max(max, d + 1);
-        }
-    }
+    private void findDepth(Node n, int d) {}
 }

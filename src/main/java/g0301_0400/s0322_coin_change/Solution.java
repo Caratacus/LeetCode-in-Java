@@ -6,21 +6,8 @@ package g0301_0400.s0322_coin_change;
 // #2024_11_16_Time_12_ms_(92.59%)_Space_44.3_MB_(64.02%)
 
 public class Solution {
+
     public int coinChange(int[] coins, int amount) {
-        int[] dp = new int[amount + 1];
-        dp[0] = 1;
-        for (int coin : coins) {
-            for (int i = coin; i <= amount; i++) {
-                int prev = dp[i - coin];
-                if (prev > 0) {
-                    if (dp[i] == 0) {
-                        dp[i] = prev + 1;
-                    } else {
-                        dp[i] = Math.min(dp[i], prev + 1);
-                    }
-                }
-            }
-        }
-        return dp[amount] - 1;
+        return 0;
     }
 }

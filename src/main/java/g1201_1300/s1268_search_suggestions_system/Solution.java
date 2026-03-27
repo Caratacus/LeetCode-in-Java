@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
+
     public List<List<String>> suggestedProducts(String[] products, String searchWord) {
         Trie trie = new Trie();
         Arrays.sort(products);

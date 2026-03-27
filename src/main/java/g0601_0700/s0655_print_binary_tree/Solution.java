@@ -24,6 +24,7 @@ import java.util.List;
  * }
  */
 public class Solution {
+
     public List<List<String>> printTree(TreeNode root) {
         List<List<String>> result = new LinkedList<>();
         int height = root == null ? 1 : getHeight(root);
@@ -40,19 +41,9 @@ public class Solution {
     }
 
     private void populateResult(
-            TreeNode root, List<List<String>> result, int row, int totalRows, int i, int j) {
-        if (row == totalRows || root == null) {
-            return;
-        }
-        result.get(row).set((i + j) / 2, Integer.toString(root.val));
-        populateResult(root.left, result, row + 1, totalRows, i, (i + j) / 2 - 1);
-        populateResult(root.right, result, row + 1, totalRows, (i + j) / 2 + 1, j);
-    }
+            TreeNode root, List<List<String>> result, int row, int totalRows, int i, int j) {}
 
     private int getHeight(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        return 1 + Math.max(getHeight(root.left), getHeight(root.right));
+        return 0;
     }
 }

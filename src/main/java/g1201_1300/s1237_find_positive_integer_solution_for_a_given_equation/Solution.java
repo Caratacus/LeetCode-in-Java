@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
+
     // This is the custom function interface.
     // You should not implement it, or speculate about its implementation
     public interface CustomFunction {

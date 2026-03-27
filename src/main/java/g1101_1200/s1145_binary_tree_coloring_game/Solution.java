@@ -21,27 +21,12 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     public boolean btreeGameWinningMove(TreeNode root, int n, int x) {
-        if (root == null) {
-            return false;
-        }
-
-        if (root.val == x) {
-            int leftCount = countNodes(root.left);
-            int rightCount = countNodes(root.right);
-            int parent = n - (leftCount + rightCount + 1);
-
-            return parent > (leftCount + rightCount)
-                    || leftCount > (parent + rightCount)
-                    || rightCount > (parent + leftCount);
-        }
-        return btreeGameWinningMove(root.left, n, x) || btreeGameWinningMove(root.right, n, x);
+        return false;
     }
 
     private int countNodes(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        return countNodes(root.left) + countNodes(root.right) + 1;
+        return 0;
     }
 }

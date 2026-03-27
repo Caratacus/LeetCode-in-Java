@@ -6,24 +6,14 @@ package g2201_2300.s2265_count_nodes_equal_to_average_of_subtree;
 import com_github_leetcode.TreeNode;
 
 public class Solution {
+
     private int ans = 0;
 
     public int averageOfSubtree(TreeNode root) {
-        dfs(root);
-        return ans;
+        return 0;
     }
 
     private int[] dfs(TreeNode node) {
-        if (node == null) {
-            return new int[] {0, 0};
-        }
-        int[] left = dfs(node.left);
-        int[] right = dfs(node.right);
-        int currsum = left[0] + right[0] + node.val;
-        int currcount = left[1] + right[1] + 1;
-        if (currsum / currcount == node.val) {
-            ++ans;
-        }
-        return new int[] {currsum, currcount};
+        return null;
     }
 }

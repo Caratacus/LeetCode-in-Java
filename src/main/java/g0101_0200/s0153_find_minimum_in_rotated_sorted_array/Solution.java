@@ -5,28 +5,12 @@ package g0101_0200.s0153_find_minimum_in_rotated_sorted_array;
 // #Big_O_Time_O(log_N)_Space_O(log_N) #2024_11_15_Time_0_ms_(100.00%)_Space_42.1_MB_(33.31%)
 
 public class Solution {
+
     private int findMinUtil(int[] nums, int l, int r) {
-        if (l == r) {
-            return nums[l];
-        }
-        int mid = (l + r) / 2;
-        if (mid == l && nums[mid] < nums[r]) {
-            return nums[l];
-        }
-        if (mid - 1 >= 0 && nums[mid - 1] > nums[mid]) {
-            return nums[mid];
-        }
-        if (nums[mid] < nums[l]) {
-            return findMinUtil(nums, l, mid - 1);
-        } else if (nums[mid] > nums[r]) {
-            return findMinUtil(nums, mid + 1, r);
-        }
-        return findMinUtil(nums, l, mid - 1);
+        return 0;
     }
 
     public int findMin(int[] nums) {
-        int l = 0;
-        int r = nums.length - 1;
-        return findMinUtil(nums, l, r);
+        return 0;
     }
 }

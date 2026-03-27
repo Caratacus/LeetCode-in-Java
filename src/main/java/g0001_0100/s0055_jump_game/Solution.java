@@ -6,19 +6,8 @@ package g0001_0100.s0055_jump_game;
 // #2024_11_11_Time_1_ms_(100.00%)_Space_45.6_MB_(44.48%)
 
 public class Solution {
+
     public boolean canJump(int[] nums) {
-        if (nums.length == 1) {
-            return true;
-        }
-        if (nums[0] == 0) {
-            return false;
-        }
-        int fin = nums.length - 1;
-        for (int i = nums.length - 2; i >= 0; i--) {
-            if ((nums[i] + i) >= fin) {
-                fin = i;
-            }
-        }
-        return fin == 0;
+        return false;
     }
 }

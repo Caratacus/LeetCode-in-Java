@@ -21,36 +21,17 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private long maxProduct = 0;
     private long total = 0;
 
     public int sumTree(TreeNode node) {
-        if (node == null) {
-            return 0;
-        }
-        node.val += sumTree(node.left) + sumTree(node.right);
-        return node.val;
+        return 0;
     }
 
-    private void helper(TreeNode root) {
-        if (root == null) {
-            return;
-        }
-        helper(root.left);
-        helper(root.right);
-        long leftSubtreeVal = root.left != null ? root.left.val : 0L;
-        long leftProduct = leftSubtreeVal * (total - leftSubtreeVal);
-        long rightSubtreeVal = root.right != null ? root.right.val : 0L;
-        long rightProduct = rightSubtreeVal * (total - rightSubtreeVal);
-        maxProduct = Math.max(maxProduct, Math.max(leftProduct, rightProduct));
-    }
+    private void helper(TreeNode root) {}
 
     public int maxProduct(TreeNode root) {
-        if (root == null) {
-            return 0;
-        }
-        total = sumTree(root);
-        helper(root);
-        return (int) (maxProduct % 1000000007L);
+        return 0;
     }
 }

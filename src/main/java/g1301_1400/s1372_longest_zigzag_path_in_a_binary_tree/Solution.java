@@ -21,21 +21,14 @@ import com_github_leetcode.TreeNode;
  * }
  */
 public class Solution {
+
     private int maxLength = 0;
 
     public int longestZigZag(TreeNode root) {
-        dfs(root, true);
-        return maxLength;
+        return 0;
     }
 
     private int dfs(TreeNode root, boolean isLeft) {
-        if (root == null) {
-            return 0;
-        }
-        int left = dfs(root.left, false);
-        int right = dfs(root.right, true);
-        maxLength = Math.max(maxLength, left);
-        maxLength = Math.max(maxLength, right);
-        return 1 + (isLeft ? left : right);
+        return 0;
     }
 }

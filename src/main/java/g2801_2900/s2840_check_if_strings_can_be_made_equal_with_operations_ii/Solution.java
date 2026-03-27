@@ -3,8 +3,9 @@ package g2801_2900.s2840_check_if_strings_can_be_made_equal_with_operations_ii;
 // #Medium #String #Hash_Table #Sorting #2023_12_12_Time_4_ms_(100.00%)_Space_44.6_MB_(50.60%)
 
 public class Solution {
+
     public boolean checkStrings(String s1, String s2) {
-        return check(0, s1, s2) && check(1, s1, s2);
+        return false;
     }
 
     boolean check(int start, String s1, String s2) {

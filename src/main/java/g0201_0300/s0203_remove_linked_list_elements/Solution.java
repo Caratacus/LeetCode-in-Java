@@ -16,23 +16,8 @@ import com_github_leetcode.ListNode;
  * }
  */
 public class Solution {
+
     public ListNode removeElements(ListNode head, int val) {
-        if (head == null) {
-            return null;
-        }
-        while (head != null && head.val == val) {
-            head = head.next;
-        }
-        ListNode r = head;
-        ListNode t = head;
-        while (r != null) {
-            if (r.val == val) {
-                t.next = r.next;
-            } else {
-                t = r;
-            }
-            r = r.next;
-        }
-        return head;
+        return null;
     }
 }

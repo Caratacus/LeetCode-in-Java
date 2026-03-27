@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 public class Solution {
+
     public List<List<String>> mostPopularCreator(String[] creators, String[] ids, int[] views) {
         HashMap<String, Long> totalViews = new HashMap<>();
         HashMap<String, Integer> maxView = new HashMap<>();

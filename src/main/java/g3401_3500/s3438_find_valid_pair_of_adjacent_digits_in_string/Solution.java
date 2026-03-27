@@ -5,6 +5,7 @@ package g3401_3500.s3438_find_valid_pair_of_adjacent_digits_in_string;
 import java.util.Arrays;
 
 public class Solution {
+
     String findValidPair(String s) {
         int[] t = new int[26];
         Arrays.fill(t, 0);

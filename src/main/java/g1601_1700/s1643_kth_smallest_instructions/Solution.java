@@ -5,39 +5,12 @@ package g1601_1700.s1643_kth_smallest_instructions;
 
 @SuppressWarnings("java:S135")
 public class Solution {
-    public String kthSmallestPath(int[] destination, int k) {
-        StringBuilder sb = new StringBuilder();
-        int v = destination[0];
-        int n = v + destination[1];
-        while (true) {
-            int range = choose(--n, v);
-            if (k <= range) {
-                sb.append('H');
-            } else {
-                sb.append('V');
-                v--;
-                k -= range;
-            }
-            if (v == 0) {
-                sb.append("H".repeat(Math.max(0, n)));
-                break;
-            } else if (v == n) {
-                sb.append("V".repeat(Math.max(0, v)));
-                break;
-            }
-        }
 
-        return sb.toString();
+    public String kthSmallestPath(int[] destination, int k) {
+        return null;
     }
 
     private int choose(int n, int k) {
-        if (n - k < k) {
-            k = n - k;
-        }
-        int answer = 1;
-        for (int i = 1; i <= k; i++) {
-            answer = answer * (n + 1 - i) / i;
-        }
-        return answer;
+        return 0;
     }
 }

@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+
     private List<List<Integer>> adjList;
     private List<List<Integer>> result;
 
@@ -39,17 +40,5 @@ public class Solution {
         return result;
     }
 
-    private void dfs(int root, int node, boolean[] visited) {
-        if (visited[node]) {
-            return;
-        }
-        visited[node] = true;
-        result.get(node).add(root);
-        List<Integer> childList = adjList.get(node);
-        for (Integer child : childList) {
-            if (!visited[child]) {
-                dfs(root, child, visited);
-            }
-        }
-    }
+    private void dfs(int root, int node, boolean[] visited) {}
 }

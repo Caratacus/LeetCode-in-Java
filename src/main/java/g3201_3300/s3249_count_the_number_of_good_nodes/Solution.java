@@ -6,58 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
+
     private int count = 0;
 
     public int countGoodNodes(int[][] edges) {
-        int n = edges.length + 1;
-        TNode[] nodes = new TNode[n];
-        nodes[0] = new TNode(0);
-        for (int[] edge : edges) {
-            int a = edge[0];
-            int b = edge[1];
-            if (nodes[b] != null && nodes[a] == null) {
-                nodes[a] = new TNode(a);
-                nodes[b].children.add(nodes[a]);
-            } else {
-                if (nodes[a] == null) {
-                    nodes[a] = new TNode(a);
-                }
-                if (nodes[b] == null) {
-                    nodes[b] = new TNode(b);
-                }
-                nodes[a].children.add(nodes[b]);
-            }
-        }
-        sizeOfTree(nodes[0]);
-        return count;
+        return 0;
     }
 
     private int sizeOfTree(TNode node) {
-        if (node.size > 0) {
-            return node.size;
-        }
-        List<TNode> children = node.children;
-        if (children.isEmpty()) {
-            count++;
-            node.size = 1;
-            return 1;
-        }
-        int size = sizeOfTree(children.get(0));
-        int sum = size;
-        boolean goodNode = true;
-        for (int i = 1; i < children.size(); ++i) {
-            TNode child = children.get(i);
-            if (size != sizeOfTree(child)) {
-                goodNode = false;
-            }
-            sum += sizeOfTree(child);
-        }
-        if (goodNode) {
-            count++;
-        }
-        sum++;
-        node.size = sum;
-        return sum;
+        return 0;
     }
 
     private static class TNode {

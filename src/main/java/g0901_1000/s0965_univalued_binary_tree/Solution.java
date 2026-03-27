@@ -4,7 +4,6 @@ package g0901_1000.s0965_univalued_binary_tree;
 // #2022_03_31_Time_1_ms_(17.57%)_Space_42.1_MB_(20.22%)
 
 import com_github_leetcode.TreeNode;
-import java.util.LinkedList;
 
 /*
  * Definition for a binary tree node.
@@ -22,22 +21,8 @@ import java.util.LinkedList;
  * }
  */
 public class Solution {
+
     public boolean isUnivalTree(TreeNode root) {
-        int val = root.val;
-        LinkedList<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            TreeNode node = queue.poll();
-            if (node.val != val) {
-                return false;
-            }
-            if (node.left != null) {
-                queue.add(node.left);
-            }
-            if (node.right != null) {
-                queue.add(node.right);
-            }
-        }
-        return true;
+        return false;
     }
 }

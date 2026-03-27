@@ -26,6 +26,7 @@ import java.util.Queue;
  * }
  */
 public class Solution {
+
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null) {

@@ -25,37 +25,8 @@ class Node {
 };
 */
 public class Solution {
+
     public Node intersect(Node n1, Node n2) {
-        if (n1.isLeaf) {
-            return n1.val ? n1 : n2;
-        }
-        if (n2.isLeaf) {
-            return n2.val ? n2 : n1;
-        }
-        Node out = new Node();
-        Node tl;
-        Node tr;
-        Node bl;
-        Node br;
-        tl = intersect(n1.topLeft, n2.topLeft);
-        tr = intersect(n1.topRight, n2.topRight);
-        bl = intersect(n1.bottomLeft, n2.bottomLeft);
-        br = intersect(n1.bottomRight, n2.bottomRight);
-        if (tl.isLeaf
-                && tr.isLeaf
-                && bl.isLeaf
-                && br.isLeaf
-                && (tl.val == tr.val)
-                && (tr.val == bl.val)
-                && (br.val == bl.val)) {
-            out.isLeaf = true;
-            out.val = tl.val;
-        } else {
-            out.topLeft = tl;
-            out.topRight = tr;
-            out.bottomLeft = bl;
-            out.bottomRight = br;
-        }
-        return out;
+        return null;
     }
 }

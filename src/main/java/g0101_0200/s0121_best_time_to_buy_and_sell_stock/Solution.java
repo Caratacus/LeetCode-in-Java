@@ -6,16 +6,8 @@ package g0101_0200.s0121_best_time_to_buy_and_sell_stock;
 // #2024_11_13_Time_1_ms_(99.78%)_Space_61.8_MB_(27.61%)
 
 public class Solution {
+
     public int maxProfit(int[] prices) {
-        int maxProfit = 0;
-        int min = prices[0];
-        for (int i = 1; i < prices.length; i++) {
-            if (prices[i] > min) {
-                maxProfit = Math.max(maxProfit, prices[i] - min);
-            } else {
-                min = prices[i];
-            }
-        }
-        return maxProfit;
+        return 0;
     }
 }

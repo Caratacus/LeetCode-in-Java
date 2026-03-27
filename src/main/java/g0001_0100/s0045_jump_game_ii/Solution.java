@@ -6,26 +6,12 @@ package g0001_0100.s0045_jump_game_ii;
 // #2024_11_10_Time_0_ms_(100.00%)_Space_45_MB_(64.44%)
 
 public class Solution {
+
     private int getMax(int[] nums, int l, int r) {
-        int max = -1;
-        int curr;
-        for (int i = l; i <= r; i++) {
-            curr = i + nums[i];
-            max = Math.max(max, curr);
-        }
-        return max;
+        return 0;
     }
 
     public int jump(int[] nums) {
-        int l = 0;
-        int r = 0;
-        int jumps = 0;
-        while (r < nums.length - 1) {
-            int prev = r;
-            r = getMax(nums, l, r);
-            l = prev + 1;
-            jumps++;
-        }
-        return jumps;
+        return 0;
     }
 }

@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Solution {
+
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         List<List<Integer>> result = new ArrayList<>();
         int min = 10000000;

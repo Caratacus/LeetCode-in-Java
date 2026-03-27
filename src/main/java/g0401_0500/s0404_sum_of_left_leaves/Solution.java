@@ -5,7 +5,6 @@ package g0401_0500.s0404_sum_of_left_leaves;
 // #2022_07_15_Time_1_ms_(29.26%)_Space_42.7_MB_(7.22%)
 
 import com_github_leetcode.TreeNode;
-import java.util.ArrayList;
 import java.util.List;
 
 /*
@@ -24,28 +23,14 @@ import java.util.List;
  * }
  */
 public class Solution {
+
     public int sumOfLeftLeaves(TreeNode root) {
-        List<Integer> arr = new ArrayList<>();
-        traverse(root, arr);
-        return getSum(arr);
+        return 0;
     }
 
-    private void traverse(TreeNode root, List<Integer> arr) {
-        if (root == null) {
-            return;
-        }
-        if (root.left != null && root.left.left == null && root.left.right == null) {
-            arr.add(root.left.val);
-        }
-        traverse(root.left, arr);
-        traverse(root.right, arr);
-    }
+    private void traverse(TreeNode root, List<Integer> arr) {}
 
     private int getSum(List<Integer> arr) {
-        int sum = 0;
-        for (Integer integer : arr) {
-            sum += integer;
-        }
-        return sum;
+        return 0;
     }
 }

@@ -6,32 +6,14 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Solution {
+
     private final Map<Integer, Integer> memo = new HashMap<>();
 
     public int smallestValue(int n) {
-        while (get(n) != n) {
-            n = get(n);
-        }
-        return n;
+        return 0;
     }
 
     private int get(int n) {
-        if (memo.containsKey(n)) {
-            return memo.get(n);
-        }
-        double r = Math.pow(n, 0.5);
-        int r1 = (int) r;
-        if (r - r1 == 0) {
-            return 2 * get(r1);
-        }
-        int res = 0;
-        for (int i = r1; i >= 2; i--) {
-            if (n % i == 0) {
-                res = get(i) + get(n / i);
-            }
-        }
-        res = res == 0 ? n : res;
-        memo.put(n, res);
-        return res;
+        return 0;
     }
 }

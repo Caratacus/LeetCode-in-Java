@@ -3,9 +3,8 @@ package g3701_3800.s3734_lexicographically_smallest_palindromic_permutation_grea
 // #Hard #String #Two_Pointers #Enumeration #Weekly_Contest_474
 // #2025_11_05_Time_2_ms_(100.00%)_Space_46.34_MB_(84.73%)
 
-import java.util.Arrays;
-
 public class Solution {
+
     boolean func(int i, String target, char[] ans, int l, int r, int[] freq, boolean end) {
         if (l > r) {
             return new String(ans).compareTo(target) > 0;
@@ -68,24 +67,6 @@ public class Solution {
     }
 
     public String lexPalindromicPermutation(String s, String target) {
-        int[] freq = new int[26];
-        for (int i = 0; i < s.length(); i++) {
-            freq[s.charAt(i) - 'a']++;
-        }
-        int oddc = 0;
-        for (int i = 0; i < 26; i++) {
-            if (freq[i] % 2 == 1) {
-                oddc++;
-            }
-        }
-        if (oddc > 1) {
-            return "";
-        }
-        char[] ans = new char[s.length()];
-        Arrays.fill(ans, '#');
-        if (func(0, target, ans, 0, s.length() - 1, freq, false)) {
-            return new String(ans);
-        }
-        return "";
+        return null;
     }
 }

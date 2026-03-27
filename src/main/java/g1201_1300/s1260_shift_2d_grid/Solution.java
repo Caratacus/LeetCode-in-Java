@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class Solution {
+
     public List<List<Integer>> shiftGrid(int[][] grid, int k) {
         if (grid == null) {
             return Collections.emptyList();
